@@ -33,7 +33,7 @@
 		
 		String hobbys = "";
 		
-		for(int i = 0; i< hobby.length; i++) {
+		for(int i = 0; i< hobby.length; i++) { //여러가지 취미 선택 풀어내기
 			hobbys += hobby[i] + "";
 		}
 		
