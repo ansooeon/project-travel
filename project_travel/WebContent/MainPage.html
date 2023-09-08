@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+</head>
+<link rel="stylesheet" href="css/MainPage.css">
+<!-- 달력 -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- 3가지 슬라이드 -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+<link rel="stylesheet" href="css/slick.css" />
+<link rel="stylesheet" href="css/slick-theme.css" />
+
+
+<body>
+    <form name="form">
+    <div class="mainbody">
+        <!--header-->
+        <div class="header">
+            <div class="headerInner">
+                <div class="util1">
+                    <a href="MainPage.html">
+                        <img src="img/MainRogo.jpg">
+                    </a>
+                </div>
+                
+                <input type="text" class="headerSearch" name="headersearch">
+
+                <ul class="util2">
+                    <a href="login.html">
+                    <li>로그인</li>
+                    </a>
+                    <a href="member.html">
+                    <li>회원가입</li>
+                    </a>
+                    <li>마이페이지</li>
+                    <li>장바구니</li>
+                </ul>
+                <ul class="util3">
+                    <li class="util_nav">자유 여행</li>
+                    <li class="util_nav">테마 여행</li>                    
+                    <a href="packagePage.html">
+                    <li class="util_nav">패키지</li>
+                    </a>
+                    <li>여행을 공유해요</li>
+                    <li>자유 게시판</li>
+                </ul>
+            </div>
+            <div class="nb">            
+                <ul class="nb_t">
+                    <li>한국</li>
+                    <li>동남아</li>
+                    <li>오세아니아</li>
+                    <li>아메리카</li>
+                    <li>유럽</li>
+                    <li>아프리카</li>
+                </ul>
+                <div class="nb_Inner">
+                    <ul class="gmenu1">
+                        <li>서울</li>
+                        <li>강원도</li>
+                        <li>부산</li>
+                        <li>전주</li>
+                        <li>제주도</li>
+                    </ul>
+                    <ul class="gmenu2">
+                        <li>필리핀</li>
+                        <li>태국</li>
+                        <li>인도네시아</li>
+                        <li>베트남</li>
+                    </ul>
+                    <ul class="gmenu3">
+                        <li>호주</li>
+                        <li>뉴질랜드</li>
+                        <li>파푸아뉴기니</li>
+                    </ul>
+                    <ul class="gmenu4">
+                        <li>미국</li>
+                        <li>캐나다</li>
+                        <li>브라질</li>
+                        <li>아르헨티나</li>
+                    </ul>
+                    <ul class="gmenu5">
+                        <li>영국</li>
+                        <li>프랑스</li>
+                        <li>스페인</li>
+                        <li>스위스</li>
+                        <li>이탈리아</li>           
+                    </ul>
+                    <ul class="gmenu6">
+                        <li>남아프리카 공화국</li>
+                        <li>이집트</li>    
+                        <li>모로코</li>    
+                        <li>케냐</li>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- mainbody -->
+        <div class="img_body">
+            <div class="slider">
+                <img src="img/mainImage1.jpg"  />
+                <img src="img/mainImage2.jpg"  />
+                <img src="img/mainImage3.jpg"  />
+                <img src="img/mainImage4.jpg"  />
+                <img src="img/mainImage5.jpg"  />
+            </div>
+            
+            <div class="searchform">
+                <div>
+                    <p class="info">검색</p>
+                </div>
+                <input type="text" title="검색어 입력" placeholder="검색 입력" class="searchInput">
+                <div>
+                    <p class="info2">나라</p>
+                </div>
+                <select class="selectInput">
+                    <option>한국</option>
+                    <option>영국</option>
+                    <option>미국</option>
+                    <option>일본</option>
+                    <option>호주</option>
+                </select>
+                <div>
+                    <p class="info3">날짜</p>
+                </div>
+                <input type="text" name="mb_11" id="mb_11" class="calenderInput" autocomplete="off"
+                    placeholder="달력" />
+                <button class="buttonInput" type="button">
+                    검색하기
+                </button>
+            </div>
+        </div>
+        <div class="mainbody">
+            <div class="mainbodyInner">
+                <div class="travel">
+                    <div class="Travel_sub">여행을 떠나요</div>
+                    <div class="travel_slide">
+                        <!-- https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-slick-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%B0%98%EC%9D%91%ED%98%95 -->
+                        <!-- https://m.blog.naver.com/ka28/221999891981 -->
+                        <div class="travel_item_active" >
+                            <div class="item-img" style="background-image:url('https://img-kyowontour.kyowontour.com/erp/imagecontentfile/cb898899-69ec-410e-9da9-c2f21c1ede3e.jpg')"></div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    #플레져중심#가족여행#캐릭터룸#브레드이발소#괌 롯데[LOTTE] 4일/5일
+                                </p>
+                                <p class="cont">#캐릭터룸 #베이비룸 #브레드이발소 #유아용 어메니티 #패밀리형 #저상침대 # 플레이팬 #바운서 #가족여행</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img" style="background-image:url('https://img-kyowontour.kyowontour.com/erp/imagecontentfile/75ec0894-05e7-4a91-911a-2ade1dbda62b.jpg')"></div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [NO옵션으로 여행한다낭] #바나힐 #골든브릿지 # 5성급 #멜리아빈펄 #리버프론트 #전신마사지 #다낭 #호이안 4/5일
+                                </p>
+                                <p class="cont">①마블마운틴 ②투본강투어 ③호이안야경투어+씨클로 ④다낭 시내관광 ⑤한강유람선</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/travel1.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [가성비]#세부#솔레아#최다판매#호핑포함#전신마사지#루프트탑#스냅촬영
+                                </p>
+                                <p class="cont">솔레아에서 감성충족&아름다운 야경감상을 할수있는 루프트탑과, 마사지와 스냅촬영포함으로 SNS인생샷을 건질수있는 패키지</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img" style="background-image:url('https://img-kyowontour.kyowontour.com/erp/media/imagecontentfile/import_image/SI300300051_3.jpg')"></div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    #융프라우산악열차+곤돌라 #자유시간 [스위스홀릭_더담다] 서유럽 3국(프/스/이) 8일/10일 #마테호른뷰 #월드체인호텔#HIT
+                                </p>
+                                <p class="cont">서유럽 여행의 PICK  NO1  3개국 #프랑스#스위스#이탈리아# 
+                                    #스위스일정UP#스위스2일~3일투어#융프라우/마테호른뷰#인터라켄#체르마트
+                                    10일일정시 3大도시추가 (몽트뢰#라보#브베) 스위스 일주를 담다
+                                    
+                                    #타사비교필수# 호텔UP# 파리정규4성 월드체인#로마 정규4성 시내숙박#</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img" style="background-image:url('https://img-kyowontour.kyowontour.com/erp/media/imagecontentfile/1d4c8570-ba37-4214-ad70-06d6fc38a308.jpg')"></div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [대자연의 로키] 시애틀 체크인으로 쉽게 가는 캐나다 로키 8일 #3대국립공원
+                                </p>
+                                <p class="cont">국적기 아시아나로 출발하는 시애틀-로키 7일</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img" style="background-image:url('https://img-kyowontour.kyowontour.com/erp/imagecontentfile/606378d3-29d0-409e-99e8-803be4da6f85.jpg')"></div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    #역사탐방# [새로운 발걸음] 튀르키예 9일 #아시아나항공 #ALL특급호텔 #4대옵션 HIT
+                                </p>
+                                <p class="cont">■ 베스트셀러이자 스테디셀러 튀르키예 완전일주 ■ 아시아나 직항 탑승 및 전일정 특급호텔 숙박으로 편안한 일정 ■ 4대 옵션 (피에롯티 케이블카/밸리댄스/보스포러스 크루즈/케코바 유람선) 포함</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="thematravel">
+                    <div class="Travel_sub2">테마 여행</div>
+                    <div class="travel_slide2">
+                        <!-- https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-slick-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%B0%98%EC%9D%91%ED%98%95 -->
+                        <!-- https://m.blog.naver.com/ka28/221999891981 -->
+                        
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema6.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    #역사탐방# [새로운 발걸음] 튀르키예 9일 #아시아나항공 #ALL특급호텔 #4대옵션 HIT
+                                </p>
+                                <p class="cont">■ 베스트셀러이자 스테디셀러 튀르키예 완전일주 ■ 아시아나 직항 탑승 및 전일정 특급호텔 숙박으로 편안한 일정 ■ 4대 옵션 (피에롯티 케이블카/밸리댄스/보스포러스 크루즈/케코바 유람선) 포함</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema1.png">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [NS홈쇼핑X방콕&파타야] 핫플레이스 방콕&파타야 # 5성급 리조트+마사지+SNS맛집+루프탑 바 5일
+                                </p>
+                                <p class="cont">누적판매 3천명돌파 X 인기상품! 가든클리프 리조트+전통마사지 120분+루프탑바+SNS핫플맛집</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema2.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    내 인생의 버킷리스트 캐나다 ⭐행운의 옐로나이프 오로라+ 눈꽃여행 로키 8일_HIT
+                                </p>
+                                <p class="cont">★오로라뷰잉2회+오로라헌팅1회★ 신비로운 행운의 상징, 옐로우나이프 오로라와 세계의 보석 로키를 한번에! 대자연의 신비를 느껴보세요! (인천-밴쿠버-옐로나이프-밴프-레이크루이스-캔모어-캘거리-인천)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema3.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [가성비]#세부#솔레아#최다판매#호핑포함#전신마사지#루프트탑#스냅촬영
+                                </p>
+                                <p class="cont">솔레아에서 감성충족&아름다운 야경감상을 할수있는 루프트탑과, 마사지와 스냅촬영포함으로 SNS인생샷을 건질수있는 패키지</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema4.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">                                    
+                                    [사랑하니까♥ 로마(#남부)+피렌체+베니스 8/9일] #공항픽업 #가이드투어
+                                </p>
+                                <p class="cont">*방문도시: 로마(4)-피렌체(1)-베니스(1)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img2">
+                                <img src="img/thema5.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [사랑하니까♥ 프라하+할슈타트+비엔나 8/9일] #공항픽업#스냅촬영#가이드투어
+                                </p>
+                                <p class="cont">*방문도시: 프라하(3)-체스키크롬로프-할슈타트(1)-비엔나(2)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="packagetravel">
+                    <div class="Travel_sub3">패키지 여행</div>
+                    <div class="travel_slide3">
+                        <!-- https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-slick-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%B0%98%EC%9D%91%ED%98%95 -->
+                        <!-- https://m.blog.naver.com/ka28/221999891981 -->
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package2.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [NS홈쇼핑X방콕&파타야] 핫플레이스 방콕&파타야 # 5성급 리조트+마사지+SNS맛집+루프탑 바 5일
+                                </p>
+                                <p class="cont">누적판매 3천명돌파 X 인기상품! 가든클리프 리조트+전통마사지 120분+루프탑바+SNS핫플맛집</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package3.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [떠나야할 이유]스페인.포르투갈 완벽일주 9일/10일 #전 일정 4성급 호텔 /가우디투어/10대특식 포함 HIT
+                                </p>
+                                <p class="cont">★스페인/포르투갈 9일/10일완벽일주★
+
+                                    9일 일정 : 터키항공 선택시 - 세계문화유산 지정! 포르투갈 "포르투" 관광 포함!
+                                    10일 일정 : 에티하드 항공 / 카타르 항공 선택시 - 1DAY 중동 관광 포함!
+                                    
+                                    취향에 맞춰 폭 넓게 준비한 여행이지만의 선물!
+                                    
+                                    전 일정 1급호텔 숙박으로 더욱 더 편안하게 준비한 일정!
+                                    현대건축의 거장 가우디 테마투어 - 성가족 성당(내부), 구엘공원(내부), 카사밀라(외부),카사바트요(외부)
+                                    꼭 맛봐야하는 10대 맛체험 (12일 일정 선택시 12대 맛 체험)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package1.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    내 인생의 버킷리스트 캐나다 ⭐행운의 옐로나이프 오로라+ 눈꽃여행 로키 8일_HIT
+                                </p>
+                                <p class="cont">★오로라뷰잉2회+오로라헌팅1회★ 신비로운 행운의 상징, 옐로우나이프 오로라와 세계의 보석 로키를 한번에! 대자연의 신비를 느껴보세요! (인천-밴쿠버-옐로나이프-밴프-레이크루이스-캔모어-캘거리-인천)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package4.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [★홈쇼핑HIT★여행이지] 보라카이 헤난 리조트 세일링보트+스톤마사지UP 4일,5일,6일
+                                </p>
+                                <p class="cont">Always 보라카이 헤난 리조트 ♡호캉스 패키지♡ ① 전신마사지1시간-> 스톤마사지로 UP ② 세일링보트 탑승 ③보라카이 인기 헤난리조트 투숙 (헤난파크 or 가든)</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package5.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    [NEW] 코타키나발루/그란디스+호핑+시내관광&라운지+자유일정 5일
+                                </p>
+                                <p class="cont">준특급 그란디스 호텔 호핑+자유일정+시내관광&라운지 이용</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        <div class="travel_item_active" >
+                            <div class="item-img">
+                                <img src="img/package6.jpg">
+                            </div>
+                            <div class="item-info">
+                                <p class="tit">
+                                    #문명투어#[요맘때] 동유럽4국(오/헝/체/독)+발칸2국(크/슬) 9일 #블레드 호수 #플리트비체 국립공원 HIT
+                                </p>
+                                <p class="cont">#아시아나항공 직항탑승 및 마일리지적립가능 #동유럽6대특식 포함 #여심저격 프라하 야경투어 #알프스의 진주라 불리는 블레드 호수 #유네스코 지정 자연유산 플리트비체국립공원</p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>      
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="footerInner">
+                <div style="float: left;">
+                    <c>개인정보처리방침</c>
+                    <c>서비스이용약관</c>
+                    <c>고객문의</c>
+                    <c>고객설문</c>
+                    <c>사이트맵</c>
+                    <c>BI 소개</c>
+                    <P style="margin-top: 23px; margin-bottom: 10px;">
+                        대표번호 : 1588-0040
+                        서울특별시 종로구 청계천로 51-1, 교원투어 빌딩 8~14층                
+                        <br>
+                        <br/>
+                        부산지사 대표번호 : 051-469-9415
+                        부산광역시 동구 중앙대로 216 교원빌딩 3층
+                    </P>
+                    <p class="address">Copyrights 2022. all rights reserved by (주)교원투어</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </form>
+    <script src="js/MainPage.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/slick.min.js"></script>
+</body>
+
+</html>

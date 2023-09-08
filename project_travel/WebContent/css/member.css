@@ -1,0 +1,361 @@
+
+body,div {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+div {
+    display: block;
+}
+
+.mainbody {
+    position: relative;
+    height: 100%;
+}
+
+/* header part */
+.header {
+    position: relative;
+    margin: 0 auto;
+    min-width: 1440px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.headerInner {
+    position: relative;
+    margin: 0 auto;
+    height: 220px;
+    width: 1440px;
+}
+
+.util1 {
+    overflow: hidden;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.headerSearch {
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 803px;
+    height: 50px;
+    padding-right: 45px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 30px;
+    box-sizing: border-box;
+    left: 270px;
+    top: 60px;
+    padding-left: 20px;
+    
+}
+
+.util2{
+    overflow:hidden;
+    position:absolute;
+    top:20px;
+    right:0px;
+    
+}
+
+.util2 li {
+    font-size: 17px;
+    float: left;
+    margin-right: 12px;
+    margin-top: 40px;
+    text-decoration: underline;
+    text-underline-offset : 3px;
+}
+
+ul.util2 li:hover {
+    background: black;
+    color:white;
+    
+    
+}
+
+.util3 {
+    position: relative;
+    width: 1440px;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    top: 100px;
+    
+}
+
+.util3 li {
+    font-size: 20px;
+    float: left;
+    width: 288px;
+    height: 70px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-decoration: underline;
+    text-underline-offset : 5px;
+    background-color: #e5e5e5;
+}
+
+ul.util3 li:hover {
+    background: black;
+    color:white;
+    
+    
+}
+
+.nb {
+    position: relative; 
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.nb_subtitle {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 1440px;
+}
+
+.nb_t {
+    position: relative;
+    width: 1440px;
+    height: 50px;
+    padding: 0;
+    margin: 0 auto;
+    top: 20px;
+    justify-content: center;
+    
+    
+}
+
+.nb_t li {
+    font-size: 20px;
+    float: left;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.nb_Inner {
+    position: relative;
+    margin: 0 auto;
+    height: 200px;
+    width: 1440px;
+    top: 30px;
+}
+.nb_Inner li {
+    padding: 2px 0 0 0;
+}
+.gmenu1,.gmenu2,.gmenu3,.gmenu4,.gmenu5,.gmenu6 {
+    
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 200px;
+    text-align: center;
+    color: white;
+    
+}
+
+.main_body {
+    position: relative;
+    height: 1600px;
+}
+
+
+.login {
+    padding: 60px;
+    width: 456px;
+    height: 700px;
+    
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#id {
+    font-size: 17px;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+}
+
+#loginBtn {
+    font-size: 15px;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    text-align: center;
+}
+
+
+
+#name, #pwd ,#pwd2, #phone, #address2,#address3  {
+    font-size: 17px;
+    width: 440px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+}
+
+#email1 {
+    font-size: 17px;
+    width: 203px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    float: left;
+    margin-right: 5px;
+}
+
+#email2 {
+    font-size: 17px;
+    width: 201px;
+    height: 46px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    margin-left: 8px;
+    
+}
+
+#birth_yy {
+    font-size: 17px;
+    width: 140px;
+    height: 46px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    float: left;
+}
+
+#birth_mm {
+    font-size: 17px;
+    width: 140px;
+    height: 46px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    
+}
+
+#birth_dd {
+    font-size: 17px;
+    width: 140px;
+    height: 46px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    float: right;
+    
+}
+
+#address1 {
+    font-size: 17px;
+    width: 310px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    padding-left: 10px;
+    float: left;
+}
+
+#address_button {
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #e5e5e5;
+    text-align: center;
+}
+
+.info {
+    text-align: left;
+    margin: 0;
+    left: 50px;
+}
+
+.content-title {
+    margin-bottom: 5px;
+    text-align: left;
+    left: 50px;
+}
+
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.summit {
+    
+    text-align: center;
+}
+
+#member {
+    font-size: 25px;
+    margin: auto;
+    width: 456px;
+    height: 80px;    
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.error_msg {
+	position: relative;
+	margin-top: 5px;
+	padding-left: 5px;
+	text-align: left;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    min-width: 1440px;
+    height: 150px;
+    padding: 40px 0 0 0;
+    background: black;
+    margin: 0;
+    line-height: 14px;
+    color: white;
+}
+.footer .footerInner {
+    
+    width: 1440px;
+    margin: 0 auto;
+    line-height: 14px;
+
+}
+.footerInner c {
+    background: url(https://www.hollys.co.kr/websrc/images/common/bg_footer_bar01.gif) right 2px no-repeat;
+    padding: 0 8px 0 3px;
+    color: #faeff0;
+}
+.address {
+    margin: 0;
+}
