@@ -63,7 +63,7 @@
 				
 			}
 		}
-		response.sendRedirect("");
+		response.sendRedirect("member_updateok.jsp");
 	%>
 
 </body>
