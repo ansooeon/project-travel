@@ -70,6 +70,7 @@
 				response.sendRedirect("login.html");
 			} else {//실패
 				out.println("회원 가입 실패!");
+				response.sendRedirect("member.html");
 			}
 			
 		} finally {
