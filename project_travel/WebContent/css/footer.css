@@ -1,0 +1,52 @@
+body,div {
+    margin: 0;
+    padding: 0;
+}
+
+A:link {text-decoration:none; color:black;}
+A:visited {text-decoration:none; color:black;}
+A:active {text-decoration:none; color:black;}
+A:hover {text-decoration:none; color:black;}
+
+ul,li {
+    list-style: none;
+}
+
+div {
+    display: block;
+}
+
+.mainbody {
+    position: relative;
+    height: 100%;
+}
+
+
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    min-width: 1440px;
+    height: 150px;
+    padding: 40px 0 0 0;
+    background: black;
+    margin: 0;
+    line-height: 14px;
+    color: white;
+}
+.footer .footerInner {
+    
+    width: 1440px;
+    margin: 0 auto;
+    line-height: 14px;
+
+}
+.footerInner c {
+    background: url(https://www.hollys.co.kr/websrc/images/common/bg_footer_bar01.gif) right 2px no-repeat;
+    padding: 0 8px 0 3px;
+    color: #faeff0;
+}
+.address {
+    margin: 0;
+}

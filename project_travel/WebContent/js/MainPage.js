@@ -29,7 +29,7 @@ window.onload = function () {
 	$(function () {
 
 		$('.travel_slide').slick({
-			slidesToShow: 3,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 			nextArrow:"<button type='button' class='slick-next'><img src='img/icon_arrow_next.jpg'></button>",
 			prevArrow:"<button type='button' class='slick-prev'><img src='img/icon_arrow_prev.jpg'></button>",
@@ -40,7 +40,7 @@ window.onload = function () {
 
 		$('.travel_slide2').slick({
 			slidesToShow: 4,
-			slidesToScroll: 2,
+			slidesToScroll: 1,
 			autoplay: true,
 			autoplaySpeed: 4000,
 			nextArrow:"<button type='button' class='slick-next'><img src='img/icon_arrow_next.jpg'></button>",
@@ -51,10 +51,11 @@ window.onload = function () {
 	$(function () {
 
 		$('.travel_slide3').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
+			slidesToShow: 4,
+			slidesToScroll: 2,
 			autoplay: true,
 			autoplaySpeed: 3000,
+			
 			
 		});
 	})        

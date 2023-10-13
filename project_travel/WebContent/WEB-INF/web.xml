@@ -1,0 +1,24 @@
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+
+	<servlet>
+	<servlet-name>servlet</servlet-name>
+	<servlet-class>javatest.SurvletInsert</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>servlet</servlet-name>
+	<url-pattern>/survlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>controller</servlet-name>
+	<servlet-class>travel.TravelController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>controller</servlet-name>
+	<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -9,7 +9,6 @@
 </head>
 <body>
 	<%
-		
 		request.setCharacterEncoding("UTF-8");//한글화
 		
 		Connection conn = null;
@@ -34,17 +33,19 @@
 			pstmt.setString(1, id);
 			
 			rs = pstmt.executeQuery();//맞는 정보 가져올때까지 반복 실행
-			
+						
 			if(rs.next()) {
 				if(!pwd.equals(rs.getString("pw"))) {
-					out.println("로그인실패!");
+					
+					response.sendRedirect("mainPage.jsp");
+					
 				}else {
-					out.println("로그인성공!");
+					
+					session.setAttribute("userid", id);
+					response.sendRedirect("mainPage.jsp");
 				}	
 				
 			} 
-			
-			
 			
 		} finally {
 			try {

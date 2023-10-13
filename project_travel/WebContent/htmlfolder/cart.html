@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cart Page</title>
+</head>
+<link href="css/cart.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="css/slick.css" />
+<link rel="stylesheet" href="css/slick-theme.css" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="js/login.js"></script>
+<body>
+	<div class="mainbody">
+		<!--header-->
+		<div class="header">
+			<div class="headerInner">
+				<div class="util1">
+					<a href="mainPage.jsp"> <img src="img/MainRogo.jpg">
+					</a>
+				</div>
+
+				<input type="text" class="headerSearch" name="headersearch">
+
+				<ul class="util2">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="member.html">회원가입</a></li>
+					<li><a href="">마이페이지</a></li>
+					<li><a href="cart.html">장바구니</a></li>
+				</ul>
+				<ul class="util3">
+					<li class="util_nav"><a href="">자유 여행</a></li>
+					<li class="util_nav"><a href="">테마 여행</a></li>
+					<li class="util_nav"><a href="packagePage.html">패키지</a></li>
+					<li><a href="travelinfo.html">여행을 공유해요</a></li>
+					<li><a href="qboard.html">질문 게시판</a></li>
+				</ul>
+			</div>
+			<div class="nb">
+				<ul class="nb_t">
+					<li>국내</li>
+					<li>아시아</li>
+					<li>오세아니아</li>
+					<li>아메리카</li>
+					<li>유럽</li>
+					<li>아프리카</li>
+				</ul>
+				<div class="nb_Inner">
+					<ul class="gmenu1">
+						<li><a href="">서울</a></li>
+						<li><a href="">강원도</a></li>
+						<li><a href="">부산</a></li>
+						<li><a href="">전주</a></li>
+						<li><a href="">제주도</a></li>
+					</ul>
+					<ul class="gmenu2">
+						<li><a href="">일본</a></li>
+						<li><a href="">태국</a></li>
+						<li><a href="">대만</a></li>
+						<li><a href="">중국</a></li>
+					</ul>
+					<ul class="gmenu3">
+						<li><a href="">호주</a></li>
+						<li><a href="">뉴질랜드</a></li>
+						<li><a href="">파푸아뉴기니</a></li>
+					</ul>
+					<ul class="gmenu4">
+						<li><a href="">미국</a></li>
+						<li><a href="">캐나다</a></li>
+						<li><a href="">브라질</a></li>
+						<li><a href="">아르헨티나</a></li>
+					</ul>
+					<ul class="gmenu5">
+						<li><a href="">영국</a></li>
+						<li><a href="">프랑스</a></li>
+						<li><a href="">스페인</a></li>
+						<li><a href="">스위스</a></li>
+						<li><a href="">이탈리아</a></li>
+					</ul>
+					<ul class="gmenu6">
+						<li><a href="">남아프리카 공화국</a></li>
+						<li><a href="">이집트</a></li>
+						<li><a href="">모로코</a></li>
+						<li><a href="">케냐</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<form>
+		<!-- cart form -->
+		<div class="main_body">
+			<div class="mainInner">
+				<h1 style="text-align: center; font-size: 50px">카트 목록</h2>
+				<div class="cartform">					
+					<ul class="cart_item">
+						<li class="item_img">사진</li> 
+						<li class="item_title">내용</li>
+						<li class="item_personal">인원</li> 
+						<li class="item_check">선택</li>					
+					</ul>
+					<div class="cart_items">
+						<img class="items_img" src="img/thema1.png">
+						<div class="items_title"></div>
+						<div class="items_personal">
+							<select class="items_option">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="items_check">
+							<input type="checkbox" class="item_checkbox" name="delete" value="delete">
+						</div>
+						
+					</div>
+					<div class="cart_items">
+						<img class="items_img" src="img/thema1.png">
+						<div class="items_title">
+							<div class="body-title">5성급 베스트웨스턴 프리미어 소나씨 숙박</div>
+	                        <div class="body-content">체크인케어 서비스 제공+디럭스오션뷰룸 진행, 성인4/6/8일 진행시 소나씨 풀빌라 무료 UP+얼리체크인OR레이트체크아웃+전일조식+왕복픽업포함</div>
+	                        <div class="body-day">2023.08.28 ~ 2023.12.13 </div>
+	                        <div class="body-price">599,000원~</div>
+						</div>
+						<div class="items_personal">
+							<select class="items_option">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="items_check">
+							<input type="checkbox" class="item_checkbox" name="delete" value="delete">
+						</div>
+					</div>
+					
+					<div class="cart_items">
+						<img class="items_img" src="img/thema1.png">
+						<div class="items_title">
+							<div class="body-title">5성급 베스트웨스턴 프리미어 소나씨 숙박</div>
+	                        <div class="body-content">체크인케어 서비스 제공+디럭스오션뷰룸 진행, 성인4/6/8일 진행시 소나씨 풀빌라 무료 UP+얼리체크인OR레이트체크아웃+전일조식+왕복픽업포함</div>
+	                        <div class="body-day">2023.08.28 ~ 2023.12.13 </div>
+	                        <div class="body-price">599,000원~</div>
+						</div>
+						<div class="items_personal">
+							<select class="items_option">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="items_check">
+							<input type="checkbox" class="item_checkbox" name="delete" value="delete">
+						</div>
+					</div>					
+					<input type="button" name="delete" value="삭제" style="float: right" class="body-enter">
+					<input type="button" name="order" value="주문하기" style="float: right" class="body-enter">
+				</div>
+				
+			</div>
+		</div>
+		</form>
+		<!-- footer -->
+        <div class="footer">
+            <div class="footerInner">
+                <div style="float: left;">
+                    <c>개인정보처리방침</c>
+                    <c>서비스이용약관</c>
+                    <c>고객문의</c>
+                    <c>고객설문</c>
+                    <c>사이트맵</c>
+                    <c>BI 소개</c>
+                    <P style="margin-top: 23px; margin-bottom: 10px;">
+                        대표번호 : 1588-0040
+                        서울특별시 종로구 청계천로 51-1, 교원투어 빌딩 8~14층                
+                        <br>
+                        <br/>
+                        부산지사 대표번호 : 051-469-9415
+                        부산광역시 동구 중앙대로 216 교원빌딩 3층
+                    </P>
+                    <p class="address">Copyrights 2022. all rights reserved by (주)교원투어</p>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

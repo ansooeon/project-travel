@@ -67,10 +67,10 @@
 			int result = pstmt.executeUpdate();
 			
 			if(result == 1) {//성공
-				response.sendRedirect("login.html");
+				response.sendRedirect("login.jsp");
 			} else {//실패
 				out.println("회원 가입 실패!");
-				response.sendRedirect("member.html");
+				response.sendRedirect("member.jsp");
 			}
 			
 		} finally {

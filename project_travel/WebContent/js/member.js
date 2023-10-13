@@ -24,90 +24,14 @@ window.onload= function() {
     var reg = /^\d{3}-\d{3,4}-\d{4}$/; //숫자만 사용할수 있게 체크
     var korcheck = /^[ㄱ-ㅎ|가-힣]+$/; //한글 체크
     
+    var use = "";
+    var ischeck = false;
     Jmem.onclick= function() {
     
-        if(id.value == "") {
-            
-            alert("아이디를 입력해 주세요.");
-            id.focus();
-            return false;
-        } else if(!idCheck.test(id.value)) {
-            
-            alert("아이디는 영어와 숫자를 조합해 4자 이상, 14자 이하로 입력해주세요.");
-            id.focus();
-            return false;
-        } else if(name.value == "") {
-            
-             alert("이름을 입력해 주세요.");
-             name.focus();
-             return false;
-
-        }else if(!korcheck.test(name.value)) {
-            
-            alert("이름은 한글만 입력 가능합니다.");
-            name.focus();
-            return false;
-
-       } else if(!pwdCheck.test(pwd.value)) {
-            
-            alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~20자리 사용해야 합니다.");
-            pwd.focus();
-            return false;	
-        } else if(pwd2.value != pwd.value) {
-            
-            alert("비밀번호 재확인해 주세요.");
-            pwd2.focus();
-            return false;
-        } else if(!reg.test(phone.value)) {
-            
-            alert("전화번호 형식으로 입력해 주세요.");
-            phone.focus();
-            return false;
-        }else if(email1.value == "") {
-            
-            alert("이메일을 입력해 주세요.");
-            email1.focus();
-            return false;
-        } else if(birth1.value == "") {
         
-            alert("년도을 선택해 주세요.");
-            birth1.focus();
-            return false;
-        }else if(birth2.value == "") {
-        
-            alert("월을 선택해 주세요.");
-            birth2.focus();
-            return false;
-        }else if(birth3.value == "") {
-        
-            alert("요일을 선택해 주세요.");
-            birth3.focus();
-            return false;
-        }else if(address1.value == "") {
-            
-            alert("우편번호를 입력해 주세요.");
-            address1.focus();
-            return false;
-        } else if(address2.value == "") {
-            
-            alert("주소를 입력해 주세요.");
-            address2.focus();
-            return false;
-        }else if(address3.value == "") {
-            
-            alert("상세주소를 입력해 주세요.");
-            address3.focus();
-            return false;
-        }else {
-            
-            alert("회원가입 성공!");
-            location.href="MainPage.html";
-        }
         
     }
     
-    
-
     
     $('#id').focusout(function(){
         $.ajax({
@@ -130,18 +54,34 @@ window.onload= function() {
     /*https://ssungkang.tistory.com/entry/javascript-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EC%8B%9C-%EC%95%84%EC%9D%B4%EB%94%94-%EC%A4%91%EB%B3%B5-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-ajax
      중복 확인 예제*/
     $('#loginBtn').click(function(){
+    	ischeck =true;
+    	if($('#id').val() == '') {
+    		alert("영어와 숫자를 조합해 4자 이상, 14자 이하로 입력해주세요!");
+    		id.focus();
+    		return;
+    	}
+    	
+    	if(id.value.length < 4 || id.value.length > 14) {
+    		alert("영어와 숫자를 조합해 4자 이상, 14자 이하로 입력해주세요!");
+    		return;
+    	}
+    	
         $.ajax({
-            url:"",
-            success : function() {
-                if (!idCheck.test(id.value)) {
+            url:"member_check.jsp",
+            data: {userId : $('#id').val()},
+            success : function(result) {
+            	
+                if ($.trim(result) == 0) {
+                	
                     $("#logincheck").html('중복된 아이디 입니다.');
                     $("#logincheck").css("color","red");// 실제 css 문법과 같은 코딩 내용을 적는다. 
                     $("#id").css("border","2px solid red");
-                    
+                    use = "possible";
                 } else {
                     $("#logincheck").html("사용가능한 아이디 입니다.");
                     $("#logincheck").css("color","black");
                     $("#id").css("border","2px solid #e5e5e5");
+                    use = "impossible";
                 }
             },
            
@@ -220,6 +160,106 @@ window.onload= function() {
             
         })
     })
+    
+    $('#member').click(function() {
+    	
+    	if(use == "possible") {
+			alert('아이디가 중복되었습니다. 다시 확인해 주세요.');
+			return false;
+		}
+		
+       if(ischeck == false) {
+			alert('중복검사를 먼저 해주세요');
+			return false;
+		}		
+		
+		if(id.value == "") {
+            
+            alert("아이디를 입력해 주세요.");
+            id.focus();
+            return false;
+        } else if(!idCheck.test(id.value)) {
+            
+            alert("아이디는 영어와 숫자를 조합해 4자 이상, 14자 이하로 입력해주세요.");
+            id.focus();
+            return false;
+        } else if(name.value == "") {
+            
+             alert("이름을 입력해 주세요.");
+             name.focus();
+             return false;
+
+        }else if(!korcheck.test(name.value)) {
+            
+            alert("이름은 한글만 입력 가능합니다.");
+            name.focus();
+            return false;
+
+       } else if(!pwdCheck.test(pwd.value)) {
+            
+            alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~20자리 사용해야 합니다.");
+            pwd.focus();
+            return false;	
+        } else if(pwd2.value != pwd.value) {
+            
+            alert("비밀번호 재확인해 주세요.");
+            pwd2.focus();
+            return false;
+        } else if(!reg.test(phone.value)) {
+            
+            alert("전화번호 형식으로 입력해 주세요.");
+            phone.focus();
+            return false;
+        }else if(email1.value == "") {
+            
+            alert("이메일을 입력해 주세요.");
+            email1.focus();
+            return false;
+        } else if(birth1.value == "") {
+        
+            alert("년도을 선택해 주세요.");
+            birth1.focus();
+            return false;
+        }else if(birth2.value == "") {
+        
+            alert("월을 선택해 주세요.");
+            birth2.focus();
+            return false;
+        }else if(birth3.value == "") {
+        
+            alert("요일을 선택해 주세요.");
+            birth3.focus();
+            return false;
+        }else if(address1.value == "") {
+            
+            alert("우편번호를 입력해 주세요.");
+            address1.focus();
+            return false;
+        } else if(address2.value == "") {
+            
+            alert("주소를 입력해 주세요.");
+            address2.focus();
+            return false;
+        }else if(address3.value == "") {
+            
+            alert("상세주소를 입력해 주세요.");
+            address3.focus();
+            return false;
+        }else if(hobby.value == "") {
+        	
+        	alert("취미를 최소 한개 이상 선택해주세요.");
+        	hobby.focus();
+        	return false;
+        	
+        }else {
+        	alert("회원가입 실패!");
+        	return;
+        }
+		
+		alert("회원 가입 성공!");
+		location.href="mainPage.jsp";
+	})
+	
     address.onclick= function () {
         new daum.Postcode({
             oncomplete: function(data) {

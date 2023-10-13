@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+body,div {
+    margin: 0;
+    padding: 0;
+}
+
+A:link {text-decoration:none; color:black;}
+A:visited {text-decoration:none; color:black;}
+A:active {text-decoration:none; color:black;}
+A:hover {text-decoration:none; color:black;}
+
+ul,li {
+    list-style: none;
+}
+
+div {
+    display: block;
+}
+
+.mainbody {
+    position: relative;
+    height: 100%;
+}
+
+
+
+/* board */
+
+.main_body {
+    position: relative;
+    min-height: 735px;
+}
+
+.mainInner {
+	position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+.board_form {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+
+.body-enter {
+    margin-top: 10px;
+    font-size: 18px;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    float: right;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height : 50px;
+    cursor: pointer;
+    
+}
+
+.cart_item {
+	position: relative;
+    width: 1000px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 4px solid #e5e5e5;
+    
+}
+
+.item_num {
+	font-size: 20px;
+    float: left;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    
+}
+
+.item_title {
+	font-size: 20px;
+    float: left;
+    width: 650px !important;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    
+}
+
+.item_writer {
+	font-size: 20px;
+    float: left;
+    width: 150px !important;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    
+}
+
+
+
+.item_date{
+	font-size: 20px;
+    float: left;
+    width: 150px !important;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    
+}
+
+.cart_items {
+	position: relative;
+    width: 1000px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.items_num {
+	font-size: 15px;
+	width:50px;
+	height: 30px;
+	text-align: center;
+	margin-top: 7px;
+}
+
+
+
+.items_title {
+	font-size: 15px;
+	width:650px;
+	height: 30px;
+	text-align: left;
+	margin-top: 7px;
+}
+
+.items_writer {
+	font-size: 15px;
+	width:150px;
+	height: 30px;
+	text-align: center;
+	margin-top: 7px;
+}
+
+.items_date {
+	font-size: 16px;
+	width:150px;
+	height: 30px;
+	text-align: center;
+	
+}
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    min-width: 1440px;
+    height: 150px;
+    padding: 40px 0 0 0;
+    background: black;
+    margin: 0;
+    line-height: 14px;
+    color: white;
+}
+.footer .footerInner {
+    
+    width: 1440px;
+    margin: 0 auto;
+    line-height: 14px;
+
+}
+.footerInner c {
+    background: url(https://www.hollys.co.kr/websrc/images/common/bg_footer_bar01.gif) right 2px no-repeat;
+    padding: 0 8px 0 3px;
+    color: #faeff0;
+}
+.address {
+    margin: 0;
+}
