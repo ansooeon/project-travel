@@ -13,16 +13,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/travelinfo.js"></script>
-<%
-	if (session.getAttribute("userid") == null) {
-%>
-<script type="text/javascript">
-	alert("로그인후 이용해 주세요. ");
-	location.href = "login.jsp";
-</script>
 
-<%}
-	%>
 <body>
 	<div class="mainbody">
         <!--header-->
@@ -30,7 +21,7 @@
         
 	        <div class="main_body">
 	        	<div class="mainInner">
-	        		<h1 style="font-size: 50px; text-align: center; border-bottom: 2px solid #e5e5e5;">문의 하기</h1>
+	        		<h1 style="font-size: 50px; text-align: center; border-bottom: 2px solid #e5e5e5;">질문 글 보기</h1>
 	        		<div class="titleform">
 	        		<%
 					request.setCharacterEncoding("UTF-8");//한글화
@@ -47,20 +38,44 @@
 						QboardDTO list = selectOne.selectOneInfo(dto); 
 					%>
 					<form action="qboardmodify.jsp">
-		        		<input type="text" class="title" placeholder="글 제목을 입력해주세요." name="title" value="<%=list.getTitle()%>">
-		        		</div>
-		        		<div class="contentform">
-		        		<textarea class="content" placeholder="글 내용을 입력해주세요." name="content"><%=list.getContent()%><%=list.getWriter()%></textarea> 
-		        		</div>
-		        		<% 
-		        		String id = (String)session.getAttribute("userid");
+						<tr>
+							<td><label style="font-size: 25px;">제목:</label></td>
+		        			<td><input type="text" class="title" placeholder="글 제목을 입력해주세요." name="title" id="title" value="<%=list.getTitle()%>"/></td>
+						</tr>
+						
+						<tr>	
+							<td><label style="font-size: 25px; margin-left: 75px;">작성자:</label></td>	        			
+		        			<td><label style="font-size: 20px;"/>&nbsp;<%=list.getWriter() %></td>
+		        		</tr>
 		        		
-		        		if( id.equals(list.getWriter())) {%>
-		        		<a href="qboarddelete.jsp?num=<%=list.getBoardnum()%>"><input type="button" class="body_enter" value="삭제하기"></a>
-		        		<input type="submit" class="body_enter" value="수정하기">
-		        		<% } %>
-	        		</form>
+		        		<tr>	
+							<td><label style="font-size: 25px; margin-left: 75px;">작성일:</label></td>	        			
+		        			<td><label style="font-size: 20px;"/>&nbsp;<%=list.getDate() %></td>
+		        		</tr>
+		        	</div>
+	        		<div class="contentform">
+	        		<textarea class="content" placeholder="글 내용을 입력해주세요." name="content" id="content"><%=list.getContent()%></textarea> 
+	        		</div>
+	        		<input type="hidden" name="board_num" value="<%=list.getBoardnum()%>"/>
 	        		
+	        		<% 
+	        		String id = (String)session.getAttribute("userid");
+	        		String writer =(String) list.getWriter();
+	        		
+	        		if( writer ==null) { %>
+	        		<div>가나다라</div>
+	        		<a href="qboard.jsp"><input type="button" class="body_enter" value="목록"></a>		        		
+	        		<% } else if(id.equals(list.getWriter())) {%>
+	        			<a href="qboarddelete.jsp?num=<%=list.getBoardnum()%>">
+		        		<input type="button" class="body_enter" value="삭제하기"></a>
+		        		<input type="submit" class="body_enter" value="수정하기" id="modify">
+	        			<a href="qboard.jsp"><input type="button" class="body_enter" value="목록"></a>
+	        		<%} else {%>
+	        			<a href="qboard.jsp"><input type="button" class="body_enter" value="목록"></a>	        			
+	        		<%
+	        			
+	        		} %>
+	        		</form>	        		
 	        	</div>
 	        </div>
 	        <!-- 글쓰기 버튼 생성 -->
@@ -70,4 +85,21 @@
         <%@ include file="headerfooter/footer.jsp" %>
     </div>
 </body>
+<script type="text/javascript">
+	$('#modify').click(function() {
+		
+		var title = document.getElementById("title");
+		var content = document.getElementById("content");
+	
+		if(title.value == "") {	        
+	        alert("제목을 입력해주세요.");
+	        title.focus();
+	        return false;
+	    }else if (content.value == "") {
+	    	alert("내용을 입력해주세요.");
+	        content.focus();
+	        return false;
+	    }
+	})
+</script>
 </html>

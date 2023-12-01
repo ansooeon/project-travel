@@ -16,24 +16,25 @@
                  <a href="mainPage.jsp">
                      <img src="img/MainRogo.jpg">
                  </a>
-             </div>
+             </div>             
              <ul class="util2">
              	 <% if(session.getAttribute("userid") == null) { %>
                  <li><a href="login.jsp">로그인</a></li>
                  <% } else { %>
+                 <li><% out.print(session.getAttribute("userid")); %>님</li>
                  <li><a href="logout.jsp">로그아웃</a></li>
                  <% } %>
                  <% if(session.getAttribute("userid") == null) { %>                   
                  <li><a href="member.jsp">회원가입</a></li>  
                  <% } else {} %>                  
                  <li><a href="mypage.jsp">마이페이지</a></li>
-                 <li><a href="cart.jsp">장바구니</a></li>
+                 <li><a href="cartpage.ca?userid=<%= session.getAttribute("userid")%>">장바구니</a></li>
              </ul>
              <ul class="util3">
                  <li class="util_nav"><a href="freePage.do?category=free">자유 여행</a></li>
                  <li class="util_nav"><a href="themaPage.do?category=thema">테마 여행</a></li>
-                 <li class="util_nav"><a href="packagePage.do?category=package">패키지</a></li>                    
-                 <li><a href="travelinfo.jsp">여행을 공유해요</a></li>
+                 <li class="util_nav"><a href="packagePage.do?category=package">패키지 여행</a></li>                    
+                 <li><a href="travelinfoList.ti">여행을 공유해요</a></li>
                  <li><a href="qboard.jsp">질문 게시판</a></li>
              </ul>
          </div>

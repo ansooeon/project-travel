@@ -42,7 +42,8 @@ public class QboardDao {
 		PreparedStatement pstmt = null;
 		
 		int result = 0;
-		String sql = "insert into question_board values(?, ?, ?, ?, default)";
+		String sql = "insert into "
+				+ "question_board values(?, ?, ?, ?, now())";
 		
 		try {
 			
@@ -54,7 +55,6 @@ public class QboardDao {
 			pstmt.setString(2, dto.getWriter());
 			pstmt.setString(3, dto.getTitle());
 			pstmt.setString(4, dto.getContent());
-			
 			
 			result = pstmt.executeUpdate();
 			
@@ -76,7 +76,8 @@ public class QboardDao {
 			connect();
 			
 			stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from question_board ");//쿼리문 쓰기위한 명령어
+			ResultSet rs = stmt.executeQuery("select * from "
+					+ "question_board order by board_num desc");//쿼리문 쓰기위한 명령어
 			
 			while(rs.next()) {
 				
@@ -113,7 +114,8 @@ public class QboardDao {
 			connect();
 			
 			stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from question_board where board_num =" + "'" + num +"'" +"");//쿼리문 쓰기위한 명령어
+			ResultSet rs = stmt.executeQuery("select * from "
+					+ "question_board where board_num =" + "'" + num +"'" +"");//쿼리문 쓰기위한 명령어
 			
 			if(rs.next()) {
 				
@@ -121,6 +123,7 @@ public class QboardDao {
 				obj2.setTitle(rs.getString("title"));
 				obj2.setBoardnum(rs.getInt("board_num"));
 				obj2.setWriter(rs.getString("member_id"));
+				obj2.setDate(rs.getString("created"));
 			}
 			
 		}catch (Exception e) {
@@ -139,15 +142,18 @@ public class QboardDao {
 		
 		String title = dto.getTitle();
 		String content = dto.getContent();
+		int boardnum = dto.getBoardnum();
 		
 		int num = 0;
-		try {
+		try {	
 			
 			connect();
-			
 			stmt = conn.createStatement();
 			
-			String result = String.format("update question_board set title ='%s', content = '%s'", title,content);
+			String result = String.format("update question_board "
+					+ "set title ='%s', "
+					+ "content = '%s' "
+					+ "where board_num = '%s'", title,content,boardnum);
 			
 			num = stmt.executeUpdate(result);
 		}
@@ -165,7 +171,6 @@ public class QboardDao {
 	public int deleted(QboardDTO dto) {
 		
 		int boardnum = dto.getBoardnum();
-		
 		int result = 0;
 		
 		try {
@@ -174,7 +179,8 @@ public class QboardDao {
 			
 			stmt = conn.createStatement();
 			
-			String sql = String.format("delete from question_board where board_num =%s", boardnum);
+			String sql = String.format(
+					"delete from question_board where board_num =%s", boardnum);
 			
 			result = stmt.executeUpdate(sql);
 		} catch (Exception e) {

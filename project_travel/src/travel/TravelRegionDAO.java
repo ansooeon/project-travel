@@ -24,7 +24,7 @@ public class TravelRegionDAO {
 		
 		dto.setAddress1(req.getParameter("region"));
 		
-		SqlSession sqlSession = sqlFactory.openSession();//db 연결
+		SqlSession sqlSession = sqlFactory.openSession();
 		
 		List<travelDTO> list = sqlSession.selectList("TravelMapper.selectRegion", dto);
 		

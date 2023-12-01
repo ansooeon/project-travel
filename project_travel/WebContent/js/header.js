@@ -11,5 +11,6 @@ window.onload= function() {
             $(".nb").slideUp("middle");
             
         });
+        
     })
 }

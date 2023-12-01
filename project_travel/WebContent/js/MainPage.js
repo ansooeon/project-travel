@@ -37,7 +37,6 @@ window.onload = function () {
 	})
 
 	$(function () {
-
 		$('.travel_slide2').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
@@ -49,14 +48,11 @@ window.onload = function () {
 	})
 
 	$(function () {
-
 		$('.travel_slide3').slick({
 			slidesToShow: 4,
 			slidesToScroll: 2,
 			autoplay: true,
-			autoplaySpeed: 3000,
-			
-			
+			autoplaySpeed: 3000,			
 		});
 	})        
 

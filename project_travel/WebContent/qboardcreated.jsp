@@ -11,12 +11,13 @@
 	<%
 		request.setCharacterEncoding("UTF-8");//한글화
 		
-		QboardDTO dto = new QboardDTO();
+		
 		
 		String title = request.getParameter("title").trim();
 		String content = request.getParameter("content").trim();
 		String userid = (String)session.getAttribute("userid");
 		
+		QboardDTO dto = new QboardDTO();
 		dto.setTitle(title);
 		dto.setContent(content);
 		dto.setWriter(userid);

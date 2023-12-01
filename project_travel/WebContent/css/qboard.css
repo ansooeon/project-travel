@@ -143,11 +143,13 @@ div {
 
 
 .items_title {
+	
 	font-size: 15px;
 	width:650px;
 	height: 30px;
 	text-align: left;
 	margin-top: 7px;
+	margin-left:10px;
 }
 
 .items_writer {
@@ -163,6 +165,7 @@ div {
 	width:150px;
 	height: 30px;
 	text-align: center;
+	margin-top: 7px;
 	
 }
 /* footer */

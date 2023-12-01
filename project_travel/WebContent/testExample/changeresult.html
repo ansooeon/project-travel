@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Changed Value</title>
+</head>
+<body>
+
+  <label for="Input">Input Value:</label>
+  <input type="text" id="myInput">
+
+  <script>
+    // input 요소 가져오기
+    var myInput = document.getElementById("myInput");
+
+    // input 값이 변경될 때 실행될 함수 등록
+    myInput.addEventListener("change", function() {
+      // 변경된 값 가져오기
+      var changedValue = myInput.value;
+
+      // 변경된 값 출력 또는 다른 처리 수행
+      console.log("Changed Value: ", changedValue);
+    });
+  </script>
+
+</body>
+</html>

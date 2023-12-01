@@ -21,7 +21,7 @@ public class TravelSurvice implements TravelInterFace {
 		List<travelDTO> list = td.selectpackageAll();
 		
 		req.setAttribute("list", list);
-		System.out.print("2");
+		
 		return list;
 	}
 

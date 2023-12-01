@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MainMapper">
+	<select id="search" resultType="travel.travelDTO">
+		select * from travel where 
+		title like CONCAT('%', #{search}, '%') 
+		or address1 = #{country} or StartDate <![CDATA[>]]> #{date}
+	</select>
+</mapper>

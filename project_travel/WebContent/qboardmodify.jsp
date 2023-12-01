@@ -15,9 +15,11 @@
 	
 		String title = request.getParameter("title").trim();
 		String content = request.getParameter("content").trim();
+		int num = Integer.parseInt(request.getParameter("board_num")); 
 		
 		dto.setTitle(title);
 		dto.setContent(content);
+		dto.setBoardnum(num);
 	%>
 	<jsp:useBean id="modify" class="Qboard.QboardDao">
 	<%

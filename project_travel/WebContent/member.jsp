@@ -83,8 +83,8 @@
 	                    
 	                    <div>
 	                        <div>
-	                            <h4 class="content-title">이메일</h2>
-	                            <input type="text" name="email1" id="email1" placeholder="이메일">@
+	                            <h4 class="content-title">이메일</h4>
+	                            <input type="text" name="email1" id="email1" placeholder="이메일">@</input>
 	                            <select name="email2" id="email2">
 	                                <option>naver.com</option>
 	                                <option>daum.net</option>
@@ -254,13 +254,13 @@
 	                            <h4 class="content-title">취미</h2>
 	                        </div>
 	                        <br/>
-	                        <input type="checkbox" name="hobby" value="자전거">자전거
-	                        <input type="checkbox" name="hobby" value="등산">등산
-	                        <input type="checkbox" name="hobby" value="영화">영화
-	                        <input type="checkbox" name="hobby" value="독서">독서
-	                        <input type="checkbox" name="hobby" value="풋살">풋살
-	                        <input type="checkbox" name="hobby" value="헬스">헬스
-	                        <input type="checkbox" name="hobby" value="수집">수집
+	                        <input type="checkbox" name="hobby" class="hobby" value="자전거">자전거
+	                        <input type="checkbox" name="hobby" class="hobby" value="등산">등산
+	                        <input type="checkbox" name="hobby" class="hobby" value="영화">영화
+	                        <input type="checkbox" name="hobby" class="hobby" value="독서">독서
+	                        <input type="checkbox" name="hobby" class="hobby" value="풋살">풋살
+	                        <input type="checkbox" name="hobby" class="hobby" value="헬스">헬스
+	                        <input type="checkbox" name="hobby" class="hobby" value="수집">수집
 	                    </div>
 	                </div>
 	                <br/>  <br/>               

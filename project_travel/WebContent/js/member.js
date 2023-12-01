@@ -71,10 +71,9 @@ window.onload= function() {
             data: {userId : $('#id').val()},
             success : function(result) {
             	
-                if ($.trim(result) == 0) {
-                	
+                if ($.trim(result) == 0) {            
                     $("#logincheck").html('중복된 아이디 입니다.');
-                    $("#logincheck").css("color","red");// 실제 css 문법과 같은 코딩 내용을 적는다. 
+                    $("#logincheck").css("color","red"); 
                     $("#id").css("border","2px solid red");
                     use = "possible";
                 } else {
@@ -275,8 +274,7 @@ window.onload= function() {
                     addr = data.roadAddress;
                 } else { // 사용자가 지번 주소를 선택했을 경우(J)
                     addr = data.jibunAddress;
-                }
-    
+                }    
                 // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
                 if(data.userSelectedType === 'R'){
                     // 법정동명이 있을 경우 추가한다. (법정리는 제외)
@@ -293,12 +291,10 @@ window.onload= function() {
                         extraAddr = ' (' + extraAddr + ')';
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
-                    document.getElementById("address2").value = extraAddr;
-                
+                    document.getElementById("address2").value = extraAddr;                
                 } else {
                     document.getElementById("address2").value = '';
-                }
-    
+                }    
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('address1').value = data.zonecode;
                 document.getElementById("address2").value = addr;

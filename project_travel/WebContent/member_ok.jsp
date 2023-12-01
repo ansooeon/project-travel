@@ -43,7 +43,8 @@
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/time_ti_travel?characterEncoding=utf8", "root", "skrdh159");
+			conn = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/time_ti_travel?characterEncoding=utf8", "root", "skrdh159");
 			if (conn ==null ) {
 				throw new Exception("데이터베이스에 연결할수 없습니다.<BR>");
 				//throw //확인문
@@ -87,24 +88,5 @@
 		}
 	
 	%>
-	<%-- <h2>회원 가입 정보</h2>
-	아이디: <%= id %> <br>
-	이름:	 <%= name %><br>
-	패스워드: <%= pwd %><br>
-	폰번호: <%= phone %><br>
-	이메일: <%= email1 %> @ <%=email2 %><br>
-	생년월일: <%= birthY %> <%= birthM %> <%= birthD %><br>
-	주소: <%= address1 %><br>
-	<%= address2 %><br>
-	<%= address3 %><br>
-	취미: <%
-	
-			if(hobby == null) {
-				out.println("취미없음");
-			}for (int i = 0; i<hobby.length;i++) {
-				out.println(hobby[i] + "");
-			}
-	
-		 %> --%>
 </body>
 </html>

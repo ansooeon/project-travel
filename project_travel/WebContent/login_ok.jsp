@@ -9,6 +9,8 @@
 </head>
 <body>
 	<%
+	
+		response.setContentType("text/html; charset=utf-8");
 		request.setCharacterEncoding("UTF-8");//한글화
 		
 		Connection conn = null;
@@ -35,14 +37,21 @@
 			rs = pstmt.executeQuery();//맞는 정보 가져올때까지 반복 실행
 						
 			if(rs.next()) {
-				if(!pwd.equals(rs.getString("pw"))) {
+				
+				if(!id.equals(rs.getString("member_id"))) {
+					System.out.print("1");
+					response.sendRedirect("login.jsp");
 					
-					response.sendRedirect("mainPage.jsp");
+				}else if(!pwd.equals(rs.getString("pw"))) {
+										
+					out.print("<script>alert('로그인 실패!');location.href='http://localhost:8081/project_travel/login.jsp';</script>");
 					
 				}else {
 					
+					
+					out.print("<script>alert('로그인 성공!');location.href='http://localhost:8081/project_travel/mainPage.jsp';</script>");
 					session.setAttribute("userid", id);
-					response.sendRedirect("mainPage.jsp");
+					request.setAttribute("userid", id);
 				}	
 				
 			} 

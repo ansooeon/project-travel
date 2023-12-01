@@ -1,0 +1,305 @@
+body,div {
+    margin: 0;
+    padding: 0;
+}
+
+A:link {text-decoration:none; color:black;}
+A:visited {text-decoration:none; color:black;}
+A:active {text-decoration:none; color:black;}
+A:hover {text-decoration:none; color:black;}
+
+ul,li {
+    list-style: none;
+}
+
+div {
+    display: block;
+}
+
+.mainbody {
+    position: relative;
+    height: 100%;
+}
+
+/* body */
+
+.main_body {
+    position: relative;
+    min-width: 1600px;
+    
+}
+
+.mainbody_Inner {
+    
+    width: 1600px;
+    margin: 0 auto;
+    
+    
+}
+
+.left_filter {
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    border: 2px solid #e5e5e5;
+    border-radius: 40px;
+    
+}
+
+.filterSearch {
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 30px;
+    box-sizing: border-box;
+    left: 50px;
+    top: 60px;
+    padding-left: 20px;
+}
+
+.item_search {
+	position: relative;
+    font-size: 30px;
+    width:100px;
+    left: 50px;
+    top: 50px;
+    color:blue;
+}
+
+.by_rigion {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    left: 50px;
+    top: 100px;
+}
+
+.by_price {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    left: 50px;
+    top: 70px;
+    
+}
+
+.by_thing {
+
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    left: 50px;
+    top: 180px;
+
+}
+
+.item-title {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: blue;
+    padding: 10px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.item-checkInner {
+    padding: 20px;
+}
+
+input[class="startnine"] {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+	margin-left: 13px;
+}
+
+input[class="item_ck1"],input[class="item_ck2"]  {
+	font-size:20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+    
+}
+input[class="item_ck3"]  {
+	font-size:20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+    margin-left: 12px;
+}
+
+input[class="item_ck4"]  {
+	font-size:20px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+    margin-left: 36px;
+}
+
+
+
+.item_ck2 {
+    margin-top: 15px;
+}
+
+.bodylist {
+    
+    width: 1000px;
+    height: 310px;
+    border: 2px solid #e5e5e5;
+    border-radius: 22px;
+    margin-left: 460px;
+    margin-top: 40px;
+    display: flex;
+    filter: brightness(1);
+}
+
+
+
+.img-box:hover {
+    filter: brightness(0.5);
+}
+
+.img-box {
+    position: relative;
+    margin: 0;
+    width: 350px;
+    height: 310px;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    
+}
+
+.img-radius {
+    border-radius: 20px 0 0 20px;
+    
+}
+
+.body-box {
+    position: relative;
+    width: 600px;
+    height:260px;    
+    padding: 25px 30px;
+    
+}
+
+.body-title {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.2;
+    max-height: 72px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.body-content {
+    margin-top: 10px;
+    font-size: 20px;
+    max-height: 54px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.body-day {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.body-price {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.body-enter {
+    
+    font-size: 18px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    right:30px;
+    bottom:25px;
+    background-color: black;
+    color: white !important;
+    text-align: center;
+    line-height : 50px;
+    cursor: pointer;   
+}
+
+.body-cart {
+	font-size: 18px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    right:181px;
+    bottom:25px;
+    background-color: black;
+    color: white !important;
+    text-align: center;
+    line-height : 50px;
+    cursor: pointer;  
+}
+
+.errorlist {
+	width: 1000px;
+    height: 2000px;
+    border: 2px solid #e5e5e5;
+    border-radius: 22px;
+    margin-left: 460px;
+    margin-top: 40px;
+    display: flex;
+    filter: brightness(1);
+}
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    min-width: 1440px;
+    height: 150px;
+    padding: 40px 0 0 0;
+    background: black;
+    margin: 0;
+    line-height: 14px;
+    color: white;
+}
+.footer .footerInner {
+    
+    width: 1440px;
+    margin: 0 auto;
+    line-height: 14px;
+
+}
+.footerInner c {
+    background: url(https://www.hollys.co.kr/websrc/images/common/bg_footer_bar01.gif) right 2px no-repeat;
+    padding: 0 8px 0 3px;
+    color: #faeff0;
+}
+.address {
+    margin: 0;
+}
+
+/* footer */

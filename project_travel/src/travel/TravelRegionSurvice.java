@@ -20,7 +20,6 @@ public class TravelRegionSurvice implements TravelSelectIF {
 		List<travelDTO> listselect = tsd.travelselectAll(req,res);
 		
 		req.setAttribute("listselect", listselect);
-		System.out.println("2");
 		
 		return listselect;
 	}

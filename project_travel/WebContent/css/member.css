@@ -80,12 +80,12 @@ div {
 
 #email2 {
     font-size: 17px;
-    width: 201px;
+    width: 209px;
     height: 46px;
     border-radius: 5px;
     border: 2px solid #e5e5e5;
     padding-left: 10px;
-    margin-left: 8px;
+    
     
 }
 
@@ -161,6 +161,21 @@ div {
 .summit {
     
     text-align: center;
+}
+
+.hobby {
+	font-size: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    border: 2px solid #bcbcbc;
+    cursor: pointer;
+    margin: 0;
+    
+}
+
+.hobby p{
+	margin-left: 3px
 }
 
 #member {

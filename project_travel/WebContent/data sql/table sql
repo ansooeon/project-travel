@@ -119,11 +119,10 @@ CREATE TABLE `travel_reply` (
 CREATE TABLE `travel_schedule` (
   `schedule_num` int(11) NOT NULL Primary key,
   `travel_num` int(11) NOT NULL,
-  `day` date NOT NULL,
   `title` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `content` text COLLATE utf8mb4_bin NOT NULL,
   CONSTRAINT FK_17 FOREIGN KEY (travel_num) REFERENCES travel(travel_num) on delete cascade
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+)
 
 CREATE TABLE `travelboard` (
   `travelboard_num` int(11) NOT NULL primary key,
@@ -155,5 +154,209 @@ CREATE TABLE `wishlist` (
   `member_id` varchar(255) NOT NULL,
   `travel_num` int(11) NOT NULL,
   CONSTRAINT `FK_19` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
-  CONSTRAINT FK_20 FOREIGN KEY (travel_num) REFERENCES travel(travel_num) on delete cascade
+  CONSTRAINT `FK_20` FOREIGN KEY (travel_num) REFERENCES travel(travel_num) on delete cascade
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `traveldetail_img` (
+	`travel_num` int(11) NOT NULL,
+    `img` varchar(255) NOT NULL,
+    CONSTRAINT `FK_22` FOREIGN KEY (travel_num) REFERENCES travel(travel_num) on delete cascade
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+on delete cascade
+연결된 데이터를 한 번에 지울 수 있어 데이터의 관리가 편리해지고 일관성을 유지할 수 있습니다.
+
+---------------------------------------------------------------------------------
+수정 
+
+CREATE TABLE `member` (
+  `member_id` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `pw` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `name` varchar(20) COLLATE utf8mb4_bin NOT NULL,
+  `phone` varchar(20) COLLATE utf8mb4_bin NOT NULL,
+  `email1` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  `email2` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  `birthY` varchar(11) COLLATE utf8mb4_bin NOT NULL,
+  `birthM` varchar(11) COLLATE utf8mb4_bin NOT NULL,
+  `birthD` varchar(11) COLLATE utf8mb4_bin NOT NULL,
+  `hobby` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  `address1` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `address2` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `address3` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `coupon` (
+  `coupon_num` int(11) NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `discountprice` int(11) NOT NULL,
+  `startdate` date NOT NULL,
+  `endDate` date NOT NULL,
+  `useTerms` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`coupon_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `member_has_coupon` (
+  `member_id` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `coupon_num` int(11) DEFAULT NULL,
+  KEY `FK_3` (`member_id`),
+  KEY `FK_4` (`coupon_num`),
+  CONSTRAINT `FK_3` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_4` FOREIGN KEY (`coupon_num`) REFERENCES `coupon` (`coupon_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `travel` (
+  `travel_num` int(11) NOT NULL,
+  `category` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `titlesub` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `address1` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  `address2` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `address3` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `tel` varchar(20) COLLATE utf8mb4_bin NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  `airport` varchar(30) COLLATE utf8mb4_bin NOT NULL,
+  `StartDate` date NOT NULL,
+  `endDate` date NOT NULL,
+  `startm` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`travel_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `cart` (
+  `travel_num` int(11) NOT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `personnal` int(11) NOT NULL,
+  KEY `FK_1` (`member_id`),
+  KEY `FK_2` (`travel_num`),
+  CONSTRAINT `FK_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_2` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+
+
+CREATE TABLE `question_board` (
+  `board_num` int(11) NOT NULL AUTO_INCREMENT,
+  `member_id` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `title` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `content` text COLLATE utf8mb4_bin NOT NULL,
+  `created` date DEFAULT NULL,
+  PRIMARY KEY (`board_num`),
+  KEY `FK_21` (`member_id`),
+  CONSTRAINT `FK_21` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+
+
+CREATE TABLE `reservation` (
+  `order_num` int(11) NOT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  `coupon_num` int(11) NOT NULL,
+  `date` datetime NOT NULL,
+  `maxguest` int(11) NOT NULL,
+  PRIMARY KEY (`order_num`),
+  KEY `FK_10` (`member_id`),
+  KEY `FK_11` (`travel_num`),
+  KEY `FK_12` (`coupon_num`),
+  CONSTRAINT `FK_10` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_11` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE,
+  CONSTRAINT `FK_12` FOREIGN KEY (`coupon_num`) REFERENCES `coupon` (`coupon_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `travel_question` (
+  `content` text COLLATE utf8mb4_bin NOT NULL,
+  `created` date DEFAULT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  KEY `FK_13` (`member_id`),
+  KEY `FK_14` (`travel_num`),
+  CONSTRAINT `FK_13` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_14` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `travel_reply` (
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  `content` text COLLATE utf8mb4_bin NOT NULL,
+  `created` date NOT NULL,
+  `rating` double DEFAULT NULL,
+  KEY `FK_15` (`member_id`),
+  KEY `FK_16` (`travel_num`),
+  CONSTRAINT `FK_15` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_16` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `travel_schedule` (
+  `schedule_num` int(11) NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  `day` date NOT NULL,
+  `title` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `content` text COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`schedule_num`),
+  KEY `FK_17` (`travel_num`),
+  CONSTRAINT `FK_17` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `travelboard` (
+  `travelboard_num` int(11) NOT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `title` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
+  `content` text COLLATE utf8mb4_bin,
+  `created` date DEFAULT NULL,
+  `region` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL,
+  `myplan` text COLLATE utf8mb4_bin,
+  `img` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`travelboard_num`),
+  KEY `FK_18` (`member_id`),
+  CONSTRAINT `FK_18` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `traveldetail_img` (
+  `travel_num` int(11) NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  KEY `FK_22` (`travel_num`),
+  CONSTRAINT `FK_22` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `wishlist` (
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  KEY `FK_19` (`member_id`),
+  KEY `FK_20` (`travel_num`),
+  CONSTRAINT `FK_19` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_20` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `payment` (
+  `payment_num` int(11) NOT NULL,
+  `order_num` int(11) NOT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `travel_num` int(11) NOT NULL,
+  `orderdate` date NOT NULL,
+  `amount_price` int(11) NOT NULL,
+  `type` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `status` varchar(10) COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`payment_num`),
+  KEY `FK_5` (`member_id`),
+  KEY `FK_6` (`travel_num`),
+  KEY `FK_7` (`order_num`),
+  CONSTRAINT `FK_5` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_6` FOREIGN KEY (`travel_num`) REFERENCES `travel` (`travel_num`) ON DELETE CASCADE,
+  CONSTRAINT `FK_7` FOREIGN KEY (`order_num`) REFERENCES `reservation` (`order_num`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `reply` (
+  `board_num` int(11) DEFAULT NULL,
+  `member_id` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `content` text COLLATE utf8mb4_bin NOT NULL,
+  `created` date NOT NULL,
+  `rating` double NOT NULL,
+  `replyimg` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  KEY `FK_8` (`member_id`),
+  KEY `FK_9` (`board_num`),
+  CONSTRAINT `FK_8` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_9` FOREIGN KEY (`board_num`) REFERENCES `travelboard` (`travelboard_num`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;

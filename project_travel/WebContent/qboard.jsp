@@ -15,7 +15,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/qboard.js"></script>
-<jsp:useBean id="qboard" class="Qboard.QboardDao"/>
+
 <body>
 	<div class="mainbody">
 	<%@ include file="headerfooter/header.jsp" %>	
@@ -30,6 +30,7 @@
 					<li class="item_writer">작성자</li> 
 					<li class="item_date">작성일</li>			
 				</ul>
+				<jsp:useBean id="qboard" class="Qboard.QboardDao"/>
 				<%
 					request.setCharacterEncoding("UTF-8");//한글화
 					
@@ -46,7 +47,7 @@
 						<div class="items_date"><%=listone.get(i).getDate() %></div>
 					</div>
 				</a>
-				<% } %>
+				<% }%>
 			</div>
 			<% if(session.getAttribute("userid") != null) { %>
 			<a href="qboardarticle.jsp">

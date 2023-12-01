@@ -17,13 +17,144 @@ insert into time_ti_travel.travel values (11,2,'[발리 짐바란] 림바 by 아
 insert into time_ti_travel.travel values (12,2,'[NS홈쇼핑/그대만은 다르다] 대만 단수이 #지우펀 #시내4성급호텔 #SNS맛집여행 #101타워 포함 4일','① 영화 "말할 수 없는 비밀"의 촬영지 단수이 ② 예류, 지우펀, 스펀 천등날리기 포함 ③ 세계 4대박물관 중 하나인 국립고궁박물관 포함 ④ 딘타이펑 딤섬, 타카오샤브샤브 등 다채로운 식단 구성','대만','타이페이','지우펀','010-1845-5154',34.75,127.66,'티웨이항공','2023-11-22','2023-11-30','11',650000,'thema6.jpg');
 
 insert into time_ti_travel.travel values (13,3,'[웰메이드] 서유럽 3개국(프/스/이) 10일 #미슐랭#자유시간3회#융프라우#명품아울렛 #나폼쏘 #HIT','"생애 처음 유럽이라면" 서유럽 완벽일주','프랑스','파리','104 Av. Jean Mermoz, 93120 La Courneuve','+33 1 48 38 33 33',48.93253292682162, 2.410393066964432,'대한항공','2023.09.16','2024.03.28','9',3490000,'package1.jpg');
-insert into time_ti_travel.travel values (14,3,'#제대로보는서유럽 [THE 달콤] 서유럽 5국(영/프/스/이/모) 12일 #스위스2DAYS #남프랑스2DAYS #10대특식 #3대박물관 #전일정1급호텔','♥남프랑스숙박+2DAYS(니스,엑상프로방스,아를,아비뇽)+모나코공화국♥ 스위스숙박+2DAYS(융프라우,인터라켄자유일정,베른), 3대박물관(대영,루브르,바티칸), 이탈리아핵심일주(로마,베니스,피렌체,시에나)  <<차별화된>> 영국/프랑스/스위스/이탈리아+모나코 공국','독일','프랑크프루트','IBIS MULHOUSE VILLE GARE CENTRALE','+33 3 89 50 00 08',47.74409997645118, 7.3457427552691685,'대한항공','2023.10.21','2024.03.28',10',650000,'package2.jpg');
+insert into time_ti_travel.travel values (14,3,'#제대로보는서유럽 [THE 달콤] 서유럽 5국(영/프/스/이/모) 12일 #스위스2DAYS #남프랑스2DAYS #10대특식 #3대박물관 #전일정1급호텔','♥남프랑스숙박+2DAYS(니스,엑상프로방스,아를,아비뇽)+모나코공화국♥ 스위스숙박+2DAYS(융프라우,인터라켄자유일정,베른), 3대박물관(대영,루브르,바티칸), 이탈리아핵심일주(로마,베니스,피렌체,시에나)  <<차별화된>> 영국/프랑스/스위스/이탈리아+모나코 공국','독일','프랑크프루트','IBIS MULHOUSE VILLE GARE CENTRALE','+33 3 89 50 00 08',47.74409997645118, 7.3457427552691685,'대한항공','2023.10.21','2024.03.28','10',650000,'package2.jpg');
 insert into time_ti_travel.travel values (15,3,'#핵심일주 #몽블랑케이블카 [위풍당당] 서유럽 4국(영/프/스/이) 10일 #영국2DAYS #마테호른뷰 #파리월드체인호텔 #3대박물관','영국숙박+2DAYS(런던,옥스퍼드,코츠월드), 2대알프스마을(몽블랑,체르마트),  3대박물관(대영,루브르,바티칸), 호텔UPGRADE(파리월드체인호텔,로마시내호텔),이탈리아핵심일주(로마,베니스,피렌체)+바티칸하이패스','영국','런던','HESTON HYDE','+44 20 8572 1818',51.487366240264926, -0.38285318873427404,'대한항공','2023.08.20','2024.03.28','8',3590000,'package3.jpg');
 insert into time_ti_travel.travel values (16,3,'#일석이조# [지중해의 두가지 보석] 그리스 & 튀르키예 9일 #국적기 #메테오라 #아테네 #인솔자 동행','간김에 다보자! 지중해의 두가지 보석 튀르키예+그리스를 한번에 보고 오는 일석이조상품','그리스','Trikalon 144','Kalampaka 422 00','+30 2432 079192',39.7070064854809, 21.630762965243562,'터키항공','2023.09.17 ','2023.10.29','9',1699000,'package4.jpg');
 insert into time_ti_travel.travel values (17,3,'#아름다운 절경 이스트라반도#[황금루트♡주말출도착] 발칸 2국 9일 (크로아티아/슬로베니아) #전 일정 일급 호텔 #두브로브니크 자유시간','# 크로아티아 #슬로베니아 일주 #휴가 추천 #두브로브니크 자유시간 보장 #휴양도시 블레드와 두브로브니크 포함 #버스이동 최소화','터키','이스탄불','Tayakadın, Terminal Caddesi No:1, 34283 Arnavutköy/İstanbul','+90 4441442',41.26117280990551, 28.74267390674605,'터키항공','2023.11.15 ','2023.11.27','11',2490000,'package5.jpg');
 insert into time_ti_travel.travel values (18,3,'#랜드마크 핵심일주# [똑똑한여행] 동유럽 3국+발칸 2국 10일(오/헝/체/크/슬) #플리트비체+할슈타트 #프라하야간투어','#기획특가상품 #마사지체험 서비스제공 #프라하야간투어 #할슈타트 호수마을 포함 #쉔부른궁전+플리트비체 국립공원 내부 관광','헝가리','부다페스트','Budapest, 1185','+36 1 296 7000',47.43296794369602, 19.260749439911056,'중국국제항공','2023.09.19','2023.10.17','9',1990000,'package6.jpg');
 
+insert into time_ti_travel.traveldetail_img values(1,'1.jpg');
+insert into time_ti_travel.traveldetail_img values(1,'2.jpg');
+insert into time_ti_travel.traveldetail_img values(1,'3.jpg');
+insert into time_ti_travel.traveldetail_img values(1,'4.jpg');
+insert into time_ti_travel.traveldetail_img values(1,'5.jpg');
 
+insert into time_ti_travel.traveldetail_img values(2,'6.jpg');
+insert into time_ti_travel.traveldetail_img values(2,'7.jpg');
+insert into time_ti_travel.traveldetail_img values(2,'8.jpg');
+insert into time_ti_travel.traveldetail_img values(2,'9.jpg');
+insert into time_ti_travel.traveldetail_img values(2,'10.jpg');
 
+insert into time_ti_travel.traveldetail_img values(3,'11.jpg');
+insert into time_ti_travel.traveldetail_img values(3,'12.jpg');
+insert into time_ti_travel.traveldetail_img values(3,'13.jpg');
+insert into time_ti_travel.traveldetail_img values(3,'14.jpg');
+insert into time_ti_travel.traveldetail_img values(3,'15.jpg');
 
+insert into time_ti_travel.traveldetail_img values(4,'16.jpg');
+insert into time_ti_travel.traveldetail_img values(4,'17.jpg');
+insert into time_ti_travel.traveldetail_img values(4,'18.jpg');
+insert into time_ti_travel.traveldetail_img values(4,'19.jpg');
+insert into time_ti_travel.traveldetail_img values(4,'20.jpg');
+
+insert into time_ti_travel.traveldetail_img values(5,'21.jpg');
+insert into time_ti_travel.traveldetail_img values(5,'22.jpg');
+insert into time_ti_travel.traveldetail_img values(5,'23.jpg');
+insert into time_ti_travel.traveldetail_img values(5,'24.jpg');
+insert into time_ti_travel.traveldetail_img values(5,'25.jpg');
+
+insert into time_ti_travel.traveldetail_img values(6,'26.jpg');
+insert into time_ti_travel.traveldetail_img values(6,'27.jpg');
+insert into time_ti_travel.traveldetail_img values(6,'28.jpg');
+insert into time_ti_travel.traveldetail_img values(6,'29.jpg');
+insert into time_ti_travel.traveldetail_img values(6,'30.jpg');
+
+insert into time_ti_travel.traveldetail_img values(7,'31.jpg');
+insert into time_ti_travel.traveldetail_img values(7,'32.jpg');
+insert into time_ti_travel.traveldetail_img values(7,'33.jpg');
+insert into time_ti_travel.traveldetail_img values(7,'34.jpg');
+insert into time_ti_travel.traveldetail_img values(7,'35.jpg');
+
+insert into time_ti_travel.traveldetail_img values(8,'36.jpg');
+insert into time_ti_travel.traveldetail_img values(8,'37.jpg');
+insert into time_ti_travel.traveldetail_img values(8,'38.jpg');
+insert into time_ti_travel.traveldetail_img values(8,'39.jpg');
+insert into time_ti_travel.traveldetail_img values(8,'40.jpg');
+
+insert into time_ti_travel.traveldetail_img values(9,'41.jpg');
+insert into time_ti_travel.traveldetail_img values(9,'42.jpg');
+insert into time_ti_travel.traveldetail_img values(9,'43.jpg');
+insert into time_ti_travel.traveldetail_img values(9,'44.jpg');
+insert into time_ti_travel.traveldetail_img values(9,'45.jpg');
+
+insert into time_ti_travel.traveldetail_img values(10,'46.jpg');
+insert into time_ti_travel.traveldetail_img values(10,'47.jpg');
+insert into time_ti_travel.traveldetail_img values(10,'48.jpg');
+insert into time_ti_travel.traveldetail_img values(10,'49.jpg');
+insert into time_ti_travel.traveldetail_img values(10,'50.jpg');
+
+insert into time_ti_travel.traveldetail_img values(11,'51.jpg');
+insert into time_ti_travel.traveldetail_img values(11,'52.jpg');
+insert into time_ti_travel.traveldetail_img values(11,'53.jpg');
+insert into time_ti_travel.traveldetail_img values(11,'54.jpg');
+insert into time_ti_travel.traveldetail_img values(11,'55.jpg');
+                                                   
+insert into time_ti_travel.traveldetail_img values(12,'56.jpg');
+insert into time_ti_travel.traveldetail_img values(12,'57.jpg');
+insert into time_ti_travel.traveldetail_img values(12,'58.jpg');
+insert into time_ti_travel.traveldetail_img values(12,'59.jpg');
+insert into time_ti_travel.traveldetail_img values(12,'60.jpg');
+
+insert into time_ti_travel.traveldetail_img values(13,'61.jpg');
+insert into time_ti_travel.traveldetail_img values(13,'62.jpg');
+insert into time_ti_travel.traveldetail_img values(13,'63.jpg');
+insert into time_ti_travel.traveldetail_img values(13,'64.jpg');
+insert into time_ti_travel.traveldetail_img values(13,'65.jpg');
+
+insert into time_ti_travel.traveldetail_img values(14,'66.jpg');
+insert into time_ti_travel.traveldetail_img values(14,'67.jpg');
+insert into time_ti_travel.traveldetail_img values(14,'68.jpg');
+insert into time_ti_travel.traveldetail_img values(14,'69.jpg');
+insert into time_ti_travel.traveldetail_img values(14,'70.jpg');
+
+insert into time_ti_travel.traveldetail_img values(15,'71.jpg');
+insert into time_ti_travel.traveldetail_img values(15,'72.jpg');
+insert into time_ti_travel.traveldetail_img values(15,'73.jpg');
+insert into time_ti_travel.traveldetail_img values(15,'74.jpg');
+insert into time_ti_travel.traveldetail_img values(15,'75.jpg');
+
+insert into time_ti_travel.traveldetail_img values(16,'76.jpg');
+insert into time_ti_travel.traveldetail_img values(16,'77.jpg');
+insert into time_ti_travel.traveldetail_img values(16,'78.jpg');
+insert into time_ti_travel.traveldetail_img values(16,'79.jpg');
+insert into time_ti_travel.traveldetail_img values(16,'80.jpg');
+                                                   
+insert into time_ti_travel.traveldetail_img values(17,'81.jpg');
+insert into time_ti_travel.traveldetail_img values(17,'82.jpg');
+insert into time_ti_travel.traveldetail_img values(17,'83.jpg');
+insert into time_ti_travel.traveldetail_img values(17,'84.jpg');
+insert into time_ti_travel.traveldetail_img values(17,'85.jpg');
+                                                   
+insert into time_ti_travel.traveldetail_img values(18,'86.jpg');
+insert into time_ti_travel.traveldetail_img values(18,'87.jpg');
+insert into time_ti_travel.traveldetail_img values(18,'88.jpg');
+insert into time_ti_travel.traveldetail_img values(18,'89.jpg');
+insert into time_ti_travel.traveldetail_img values(18,'90.jpg');
+
+insert into time_ti_travel.travel_schedule values (1,1,now(),'프랑스의 자유로움을! ','■ 에펠탑, 개선문, 몽마르뜨, 센느강, 루브르 박물관, 오르세 미술관 등. 랜드마크부터 예술, 패션, 미식 등 그 어느 하나로 특정할 수 없는 것이 파리의 매력이라 할 수 있다. 지베르니, 디즈니랜드, 몽쉘미쉘 등 파리 근교 여행 또한 훌륭하니 짧게 머물기에는 여러모로 아쉬운 도시이다.');
+insert into time_ti_travel.travel_schedule values (2,2,now(),'서울에 모든것!','■ 롯데호텔 서울에서 3~5분 걸어가면 시티버스 정류장이 있어 다양한 장소로의 접근성이 뛰어납니다. 서울 시내 전체를 둘러보실 수 있는 관광 전용 버스입니다. 청계천 메인 입구는 롯데호텔 서울에서 서울 시청 방향으로 5분간 걸어 도착할 수 있으며, 시즌별로 등불 축제, 김장 축제 등 여러 축제에 참여하실 수 있습니다. 시청 청계광장에서 동대문까지 총 거리가 약 5.84km로 서울 도심에서 자연의 정취를 느끼실 수 있는 공간이기도 하며, 아침 조깅을 하기에도 좋은 장소입니다.');
+insert into time_ti_travel.travel_schedule values (3,3,now(),'교통 걱정 없이 LA에서 바로 출발해요!','■ LA시티와 대중교통으로 해결되는 근교까지는 자유여행으로 계획합니다. 이외 개인적으로 다녀오면 교통부터 숙박, 이동경로가 모두 골치아픈 그랜드캐년, 요세미티 등 먼 거리의 미서부 여행지들은 투어나 세미패키지로 여행하는 것이죠. 미국과 같이 큰 대륙을 여행할 때, 패키지의 장점과 자유여행의 장점을 모두 합친 방법이라고 볼 수 있습니다. 또한 어르신이나 아이들과 떠나는 가족여행하시는 분들에게도 좋아요. ');
+insert into time_ti_travel.travel_schedule values (4,4,now(),'이집트 학자 가이드와 함께 기자의 대피라미드&스핑크스를!','■ 파라오의 장엄한 땅, 이집트 문명 속으로 시간여행을 떠납니다. 세계 7대 불가사의인 기자의 대 피라미드와 스핑크스, 아부심벨, 룩소르, 아스완 등의 놀라운 이집트의 고대 문화 역사 유적지를 돌아보고, 이집트 일정의 하일라이트! 사막 투어까지 잊지못할 경험으로 알차게 채워드립니다.');
+insert into time_ti_travel.travel_schedule values (5,5,now(),'예술의 향기가 가득한 브루클린!','■ 뉴욕 맨해튼 동남쪽에 자리한 지구. 네덜란드의 도시 브뢰컬런(Breukelen)에서 이름을 땄으며, 1898년 뉴욕시와 합병되기 전까지는 독립적인 도시였다. 다양한 이민자가 모여 독특한 문화를 형성했는데, 그들만의 개성 넘치는 예술 현장을 엿볼 수 있다.');
+insert into time_ti_travel.travel_schedule values (6,6,now(),'우리만의 일정으로 채우는 도쿄 자유상품','■ 세계 최대의 도시 중 하나인 도쿄에 오시면 여러 전자 제품 상점, 높이 솟아오른 고층 건물, 오랜 예술품, 그리고 예쁜 벚꽃 등을 만나보실 수 있습니다. 인구가 3천만 명이 넘는 도쿄의 대도심은 세계에서 가장 인구가 많은 지역 중 하나입니다. 제2차 세계대전 때 폭격으로 도시의 절반이 파괴되었다는 점을 생각하면 오늘날 도쿄의 이러한 위상은 실로 놀라운 일입니다. 1945년 이후 재건된 도쿄에는 과거의 전통적 분위기와 앞서 가는 현대적 분위기가 멋지게 조화를 이루고 있습니다. 고층 건물 꼭대기로 올라가 끝없이 펼쳐진 도쿄 시내의 전경을 감상해 보세요. 레인보우 브리지, 도쿄 타워, 모리 타워, 도쿄 스카이트리 등에서는 일본의 현대식 스카이라인뿐만 아니라 후지 산 너머까지 전형적인 일본의 풍경을 감상하실 수 있습니다.');
+insert into time_ti_travel.travel_schedule values (7,7,now(),'열정에 도시! 스페인 바르셀로나!','■ 대도시 카탈루냐의 수도인 바르셀로나는 전설적인 모더니스트 건축가 안토니 가우디가 남긴 이국적인 랜드마크들 덕분에 매혹적인 첫인상을 남기는 곳이에요. 화려하고 동화 같은 사그라다 파밀리아 교회는 도시에서 가장 놀라운 관광지이지만, 다양한 색조의 모자이크와 초현실적인 건축물이 있는 구엘 공원도 지은 비용만큼의 값어치를 하는 곳이에요. 더운 여름에는 붐비는 바르셀로네타 해변에서 여유로운 날들을 즐기면서 육즙이 풍부한 구운 맛조개와 풍부한 이베리코 햄 같은 맛있는 타파스 요리를 즐기면 좋아요. 바르셀로나의 열기는 해가 진 후에도 보헤미안 바와 나이트클럽에서 계속 이어진답니다.');
+insert into time_ti_travel.travel_schedule values (8,8,now(),'지금 바로 떠나는 해외 골프 여행!','■ 사이판의 대표 골프장은 라오라오베이골프&리조트Lao Lao Bay Golf&Resort와 코럴오션골프리조트Coral Ocean Golf Resort. 사이판국제공항에서 5분 거리에 위치한 코럴오션골프리조트는 LPGA 규격 7000야드, 18홀 규모의 챔피언십 코스를 보유했다. 넓은 페어웨이와 해안선을 따라 만들어진 시사이드 코스는 남태평양의 풍광을 만끽할 수 있어 한국 골퍼에게도 사랑받는 곳이다.');
+insert into time_ti_travel.travel_schedule values (9,9,now(),'동양의 그랜드캐년 태항산','■ 태항산대협곡의 중심에 위치한 팔천협은 고대해양 박물관이라고 불릴 정도로 다양한 지질이 존재한다. 고생대의 ▲캄브리아기 ▲오르도비스기 ▲카르스트기 등을 거치면서 형성된 협곡의 벽은 시간과 역사의 흐름을 담고 있다. 뿐만 아니라 협곡 안쪽에서는 투명으로 돼 있는 벼랑 끝 하늘계단과 아시아 최고의 길이를 자랑하는 2,900m 케이블카를 이용하며 자연을 만끽할 수 있다. 그 외에도 3km에 달하는 레프팅, 신선한 공기 속의 산림욕 등 다양한 형태의 레포츠와 휴양을 즐길 수 있다.');
+insert into time_ti_travel.travel_schedule values (10,10,now(),'작은 섬에 깃들어 있는 큰 영혼의 문화, 괌','■ 4,000년의 역사를 자랑하는 괌에는 130개가 넘는 국립 사적지(National Register of Historic Place)가 있습니다. 사랑의 절벽(Two Lovers Point)에 서린 이야기를 알아보고 차모로 마을(Chamorro Village)에서 문화 공연을 관람해보세요. 수도 하갓냐(Hågatña)에서 4km가량 걷는 도보 투어에 참여해 17개의 역사적인 장소를 돌아보세요. 집을 지탱할 때 사용했던 아주 오래된 라테스톤(latte stone: 기둥 위에 컵 모양의 머릿돌을 올린 구조물)을 관찰해보세요. ');
+insert into time_ti_travel.travel_schedule values (11,11,now(),'발리는 인도네시아 군도 중 한 섬!','■ 발리는 배낭 여행객과 국외 거주자를 비롯하여 가족 단위 여행객이나 신혼 여행객에 이르기까지 다양한 사람들이 방문하는 곳입니다. 한때는 그저 평화롭기만 했던 평범한 열대 섬 발리는 그 특유의 아름다운 해변, 완만한 경사를 이루는 산, 독특한 문화와 정신, 그리고 탁월한 예술 작품 등으로 전 세계가 다 아는 유명한 섬이 되었습니다. 쿠타 해변(Kuta Beach)과 레기안 해변(Legian Beach)은 파도타기를 즐기고 싶은 관광객들에게 최고의 장소입니다. 쿠타 및 레기안의 마을을 방문하셔도 시장, 바, 워터파크, 음식점 등 즐길 거리가 가득합니다.');
+insert into time_ti_travel.travel_schedule values (12,12,now(),'아름다운 석양의 도시, 단수이','■ 대만 북서부에 있는 항구 도시, 단수이. 영화 속에 등장할 만큼 낭만적인 느낌을 가지고 있는 도시다. 단수이에서는 낮과 밤을 모두 놓칠 수 없다. 낮에는 홍마오청과 진리 대학에서 대만 속 유럽을 만날 수 있고, 밤에는 빠리, 워런마터우에서 아름다운 일몰을 감상할 수 있다.');
+insert into time_ti_travel.travel_schedule values (13,13,now(),'유럽이 처음이라면 서유럽!','■ ‘유럽의 지붕’이라 불리는 융프라우는 인터라켄의 명물이자 인터라켄이 전 세계적으로 유명해진 이유이기도 하다. 높이가 3,454m에 달하는 융프라우요흐는 눈 덮인 산봉우리와 아름다운 설경으로 잘 알려져 있다. 라우요흐는 ‘젊은 처녀의 어깨’라는 뜻으로 가장 높다는 의미도 지니고 있다. 융프라우요흐에 오르는 교통수단인 톱니바퀴 기차도 명물이다. 전망대에 오르면 파노라마처럼 펼쳐지는 풍경을 감상할 수 있다. 유럽 최정상에서 식사를 할 수 있는 레스토랑과 반짝이는 눈 속의 얼음 궁전, 유럽에서 가장 긴 빙하인 알레치 빙하가 있다. 여름이면 푸른 초원으로 변한다.');
+insert into time_ti_travel.travel_schedule values (14,14,now(),'파리','파리에 자유를 느껴보세요');
+insert into time_ti_travel.travel_schedule values (15,15,now(),'로마 속 작은 나라 바티칸 투어!','■ 세계 가톨릭 성당의 총본산으로 최고의 권위를 자랑하는 유럽에서 가장 작은 국가, 바티칸 시국.바티칸에서 전문 한국어 가이드와 함께 역사 속으로의 시간 여행을 떠나보세요.');
+insert into time_ti_travel.travel_schedule values (16,16,now(),'서구 문명의 뿌리! 지중해 섬에서 근사한 태양을!','■ 이 고대 남동부 유럽 국가에서 서구 문명의 뿌리에 대해 알아보고 지중해 섬에서 근사한 태양도 만끽해 보세요. 그 어느 곳도 그리스만큼 고전 문명이 살아 있는 곳은 없답니다. 고대 사원은 마치 최근에 설치된 작품처럼 존재하고 있죠. 수천 마일로 뻗어 있는 지중해 해변을 즐기고, 유럽 최고 인기 여행지에서 수백 개의 아름다운 섬도 구경해 보세요. 아테네는 매년 수백 만 명의 사람들이 몰리는 여행지로 고대 유적지 중 가장 유명한 건물을 보기 위한 장소죠. 이 도시에서 가장 눈에 띄는 랜드마크는 바로 아크로폴리스입니다. 기원전 500년부터 이어져 온 건물로 도시의 바위 절벽 꼭대기에 위치하죠. 파르테논도 놓칠 수 없죠. 사면이 대리석 기둥으로 둘러싸인 그리스 신전입니다. 이 외에도 아테네 북쪽의 파르나소스 산의 델피 유적지를 비롯해 그리스 전역에서는 다양한 고고학 지역을 만나실 수 있습니다.');
+insert into time_ti_travel.travel_schedule values (17,17,now(),'핵심 동유럽 오스트리아, 헝가리, 체코! 아드리아해의 진주 크로아티아 까지 한번에!','■ 불가리아, 루마니아, 슬로베니아는 낯이 익지만 몰도바와 유고슬라비아 연방이 해체되면서 독립한 보스니아 헤르체고비나, 몬테네그로, 세르비아, 코소보, 알바니아, 마케도니아(북마케도니아) 등의 국가명은 처음 들어보는 사람도 많을 것이다. 아드리아해, 이오니아해, 에게해, 마르마라해, 흑해에 둘러싸인 발칸반도는 자연 경관이 훼손되지 않고 남아 있는 아름다운 곳. 특히 최고의 호수 슈코더르호는 람사르 협약이 지정한 중요한 습지이며, 유럽 최대의 조류보호구역이기도 하다. 또한 크고 작은 전쟁과 분쟁을 치르는 와중에도 이슬람, 기독교, 그리스정교, 세 문화가 융합돼 있는 세계적인 문화유산을 관람해 보세요!');
+insert into time_ti_travel.travel_schedule values (18,18,now(),'각자의 특색이 있는 아름다움에 동유럽!','■ 동유럽 여행의 입문 코스, 체코 프라하! 블타바강, 주황빛 지붕의 건축물, 도심 곳곳을 채워주는 탑과 성, 예술이 함께 숨 쉬는 이 도시를 만나면, 누구나 사랑에 빠지게 된다. 발길 닿는 대로 걷다가 만나게 되는 풍경들에 반하고, 맛있는 맥주 향에 취하고, 거리에서 연주되는 음악소리에 흠뻑 젖어들다 보면 프라하 여행이 더욱 특별해질 것이다.');
+
+insert into time_ti_travel.travelboard values(1,'bb11','여행이 나에게 가져다준 의미','여행은 정말 좋아요',now(),'프랑스 프라하','여행을 계획','package4.jpg');
+insert into time_ti_travel.travelboard values(2,'aa11','피라미드 그 단어만으로 설레는 단어','여행이 정말 설레요',now(),'이집트 카이로','여행을 계획2','473062_large_1582230185.jpg');
+insert into time_ti_travel.travelboard values(3,'bb11','미국 동부의 분위기','미국의 동부로 가자!',now(),'미국','여행을 계획3','url-YxsypNkJzMHEdbWN.jpg');
+insert into time_ti_travel.travelboard values(4,'aa11','대만의 단수이 여행!','대만 특유의 분위기!',now(),'대만 단수이','여행을 계획4','thema6.jpg');
+insert into time_ti_travel.travelboard values(5,'aa11','미국 발리여행!','발리의 시원함',now(),'미국','여행을 계획5','thema5.jpg');
+insert into time_ti_travel.travelboard values(6,'aa11','도쿄 자유로운 여행!','천천히 도쿄를 즐겨요',now(),'도쿄','여행을 계획6','url-kGD7PKd2spbuKYVu.jpg');
+insert into time_ti_travel.travelboard values(7,'bb11','여행은 내면을 바라보게 해줘요!','여행은 열정',now(),'프랑스 프라하','여행을 계획','package5.jpg');
 

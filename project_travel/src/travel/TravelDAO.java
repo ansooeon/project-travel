@@ -22,7 +22,7 @@ public class TravelDAO {
 		List<travelDTO> list = sqlSession.selectList("TravelMapper.selectpackageAll");
 		
 		sqlSession.close();//db 통신 닫기
-		System.out.print("3");
+		
 		return list;
 		
 	}

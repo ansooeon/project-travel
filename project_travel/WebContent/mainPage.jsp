@@ -1,5 +1,5 @@
 
-<%@page import="Mainpage.MainpageDto"%>
+<%@page import="mainprint.MainpageDto"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -27,97 +27,78 @@
 
 
 <body>
-    <form name="form">
+    
     <div class="mainbody">
         <!--header-->
         <%@ include file="headerfooter/header.jsp" %>
 	
         <!-- mainbody -->
         <div class="img_body">
-            <div class="slider">
+            <div class="slider">        
 	         	<img src="img/mainImage1.jpg"  />	
                 <img src="img/mainImage2.jpg"  />
                 <img src="img/mainImage3.jpg"  />
                 <img src="img/mainImage4.jpg"  />
-                <img src="img/mainImage5.jpg"  />
-                
+                <img src="img/mainImage5.jpg"  />                
             </div>
-            
-            <div class="searchform">
-                <div>
-                    <p class="info">검색</p>
-                </div>
-                <input type="text" title="검색어 입력" placeholder="검색 입력" class="searchInput">
-                <div>
-                    <p class="info2">나라</p>
-                </div>
-                <select class="selectInput">
-                    <option>한국</option>
-                    <option>영국</option>
-                    <option>미국</option>
-                    <option>일본</option>
-                    <option>호주</option>
-                </select>
-                <div>
-                    <p class="info3">날짜</p>
-                </div>
-                <input type="text" name="mb_11" id="mb_11" class="calenderInput" autocomplete="off"
-                    placeholder="달력" />
-                <button class="buttonInput" type="button">
-                    검색하기
-                </button>
-            </div>
+            <form action="searchresult.bo" name="form" method="get">
+	            <div class="searchform">
+	                <div>
+	                    <p class="info">검색</p>
+	                </div>	                
+	                <input type="text" class="searchInput" name="search" id="search" placeholder="검색 입력" >	                 
+	                <div>
+	                    <p class="info2">나라</p>
+	                </div>
+	                <select class="selectInput" name="country" id="country">
+	                	<option value="" disabled selected>선택</option>
+	                    <option value="대한한국">한국</option>
+	                    <option value="영국">영국</option>
+	                    <option value="미국">미국</option>
+	                    <option value="일본">일본</option>
+	                    <option value="호주">호주</option>
+	                </select>
+	                <div>
+	                    <p class="info3">날짜</p>
+	                </div>
+	                <input type="text" name="mb_11" id="mb_11" class="calenderInput" autocomplete="off" placeholder="날짜 선택"/>
+	                <input class="buttonInput" type="submit" value="검색하기"/>                
+	            </div>
+            </form>
         </div>
-        <jsp:useBean id="print" class="Mainpage.MainpagePrint"/>
+        <jsp:useBean id="print" class="mainprint.MainpagePrint"/>
         <div class="mainbody">
             <div class="mainbodyInner">
                 <div class="travel">
                     <div class="Travel_sub">여행을 떠나요</div>
                     <div class="travel_slide">
                     <%
-                    	ArrayList<MainpageDto> list = print.MainpagePrint();
-            
+                    	ArrayList<MainpageDto> list = print.MainpagePrint();    
+                    
                     	for(int i = 0; i<list.size(); i++) {
-                    		if(list.get(i).getCategory() == 1) {
-                    %>
-                        <!-- https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-slick-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%B0%98%EC%9D%91%ED%98%95 -->
-                        <!-- https://m.blog.naver.com/ka28/221999891981 -->
-                        <div class="travel_item_active2" >
-                            <div class="item-img2">
-                           		<a href="">
-                                <img src="img/<%= list.get(i).getImgFile()  %>">
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <p class="tit">
-                                	<a href="">
-                                    <%= list.get(i).getTitle() %>
-                                    </a>
-                                </p>
-                                <p class="cont"><a href=""><%= list.get(i).getTitlesub() %></a></p>
-                                <div class="btn-detail"><a href="">자세히 보기</a></div>
-                            </div>      
-                        </div>
-                        <%-- <div class="travel_item_active" >
-                            <div class="item-img">
-                            <a href="">
-                                <img src="img/<%= list.get(i).getImgFile()  %>">
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <p class="tit">
-                                <a href="">
-                                    <%= list.get(i).getTitle() %>
-                                    </a>
-                                </p>
-                                <p class="cont"><a href=""><%= list.get(i).getTitlesub() %></a></p>
-                                <div class="btn-detail"><a href="">자세히 보기</a></div>
-                            </div>      
-                        </div> --%>
-                         <%
+                    		if(i == 6) {
+                    			break;
                     		}
-                    	}
-                    	%>
+                    		
+                    		if(list.get(i).getCategory() == 1) {
+                    %>                        
+                    	<div class="travel_item_active2" >
+                        	<a href="traveldetail.co?travel_num=<%= list.get(i).getTravel_num() %>">
+                            <div class="item-img2">                           		
+                                <img src="img/<%= list.get(i).getImgFile() %>">
+								<div class="hovertext"><%=list.get(i).getAddress1() %></div>                                     
+                            </div>
+                            <div class="item-info">
+                                <p class="tit"><%= list.get(i).getTitle() %></p>
+                                <p class="cont"><%= list.get(i).getTitlesub() %></p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>                            
+                            </a>      
+                        </div>                      
+                    <%
+                			}
+                		}
+                	%>
                     </div>
                 </div>
                 <div class="thematravel">
@@ -126,24 +107,24 @@
                         <!-- https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-slick-%EC%82%AC%EC%9A%A9%EB%B2%95%EB%B0%98%EC%9D%91%ED%98%95 -->
                         <!-- https://m.blog.naver.com/ka28/221999891981 -->
                         <%
-                        	for(int i = 0; i<list.size(); i++) {
-                    			if(list.get(i).getCategory() == 2) {
+                       	for(int i = 0; i<list.size(); i++) {
+                       		if(i == 12) {
+                       			break;
+                       		}                        		
+                   			if(list.get(i).getCategory() == 2) {
                         %>
                         <div class="travel_item_active2" >
-                            <div class="item-img2">
-                           		<a href="">
-                                <img src="img/<%= list.get(i).getImgFile()  %>">
-                                </a>
+                        	<a href="traveldetail.co?travel_num=<%= list.get(i).getTravel_num() %>">
+                            <div class="item-img2">                           		
+                                <img src="img/<%= list.get(i).getImgFile() %>">     
+                                <div class="hovertext"><%=list.get(i).getAddress1() %></div>                                 
                             </div>
                             <div class="item-info">
-                                <p class="tit">
-                                	<a href="">
-                                    <%= list.get(i).getTitle() %>
-                                    </a>
-                                </p>
-                                <p class="cont"><a href=""><%= list.get(i).getTitlesub() %></a></p>
-                                <div class="btn-detail"><a href="">자세히 보기</a></div>
-                            </div>      
+                                <p class="tit"><%= list.get(i).getTitle() %></p>
+                                <p class="cont"><%= list.get(i).getTitlesub() %></p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>                            
+                            </a>      
                         </div>
                         <%
                     			}
@@ -158,40 +139,25 @@
                         <!-- https://m.blog.naver.com/ka28/221999891981 -->
                         <%
                         	for(int i = 0; i<list.size(); i++) {
+                        		if(i == 18) {
+                        			break;
+                        		}
+                        		
                     			if(list.get(i).getCategory() == 3) {
                         %>
-                        <div class="travel_item_active2" >
-                            <div class="item-img2">
-                           		<a href="">
-                                <img src="img/<%= list.get(i).getImgFile()  %>">
-                                </a>
+                        <div class="travel_item_active2">
+                        	<a href="traveldetail.co?travel_num=<%= list.get(i).getTravel_num() %>">
+                            <div class="item-img2">                               		
+                                <img src="img/<%= list.get(i).getImgFile() %>">
+                                <div class="hovertext"><%=list.get(i).getAddress1() %></div>                                                           
                             </div>
                             <div class="item-info">
-                                <p class="tit">
-                                	<a href="">
-                                    <%= list.get(i).getTitle() %>
-                                    </a>
-                                </p>
-                                <p class="cont"><a href=""><%= list.get(i).getTitlesub() %></a></p>
-                                <div class="btn-detail"><a href="">자세히 보기</a></div>
-                            </div>      
-                        </div>
-                        <%-- <div class="travel_item_active" >
-                            <div class="item-img">
-                            <a href="">
-                                <img src="img/<%= list.get(i).getImgFile()  %>">
-                                </a>
-                            </div>
-                            <div class="item-info">
-                                <p class="tit">
-                                <a href="">
-                                    <%= list.get(i).getTitle() %>
-                                    </a>
-                                </p>
-                                <p class="cont"><a href=""><%= list.get(i).getTitlesub() %></a></p>
-                                <div class="btn-detail"><a href="">자세히 보기</a></div>
-                            </div>      
-                        </div> --%>
+                                <p class="tit"><%= list.get(i).getTitle() %></p>
+                                <p class="cont"><%= list.get(i).getTitlesub() %></p>
+                                <div class="btn-detail">자세히 보기</div>
+                            </div>                            
+                            </a>      
+                        </div>                      
                         <%
                     			}
                     		}
@@ -202,9 +168,8 @@
         </div>
         <!-- footer -->
         <%@ include file="headerfooter/footer.jsp" %>
-
     </div>
-    </form>
+    
     <script src="js/MainPage.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/slick.min.js"></script>

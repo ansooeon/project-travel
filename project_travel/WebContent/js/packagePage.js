@@ -64,6 +64,22 @@ window.onload = function() {
 		regionCh();
 
 		var tmpEle = document.getElementsByName("region");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[0].checked == true) { // 10만원이 체크 된다면
 
@@ -85,14 +101,10 @@ window.onload = function() {
 			},
 			success : function(result) {
 				console.log(result);
-				for (var i = 0; i < 8; i++) {
+				for (var i = 0; i < 18; i++) {
 					$("#listhide").remove();
 				}
 				document.getElementById("liststart").innerHTML = result;
-			},
-			error : function(result) {
-				alert(JSON.stringify(result));
-				alert("실패!");
 			}
 		})
 
@@ -103,6 +115,22 @@ window.onload = function() {
 		regionCh();
 
 		var tmpEle = document.getElementsByName("region");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[1].checked == true) { // 10만원이 체크 된다면
 
@@ -141,6 +169,22 @@ window.onload = function() {
 		regionCh();
 
 		var tmpEle = document.getElementsByName("region");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[2].checked == true) { // 10만원이 체크 된다면
 
@@ -179,6 +223,22 @@ window.onload = function() {
 		regionCh();
 
 		var tmpEle = document.getElementsByName("region");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[3].checked == true) { // 10만원이 체크 된다면
 
@@ -217,6 +277,22 @@ window.onload = function() {
 		regionCh();
 
 		var tmpEle = document.getElementsByName("region");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[4].checked == true) { // 10만원이 체크 된다면
 
@@ -295,6 +371,22 @@ window.onload = function() {
 		priceCh();
 
 		var tmpEle = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}		
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
 
 		if (tmpEle[0].checked == true) { // 10만원이 체크 된다면
 
@@ -334,6 +426,22 @@ window.onload = function() {
 		priceCh();
 
 		var tmpEle = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}		
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
 
 		if (tmpEle[1].checked == true) { // 10만원이 체크 된다면
 
@@ -374,6 +482,22 @@ window.onload = function() {
 		priceCh();
 
 		var tmpEle = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}		
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
 
 		if (tmpEle[2].checked == true) { // 10만원이 체크 된다면
 
@@ -414,6 +538,22 @@ window.onload = function() {
 
 		priceCh();
 		var tmpEle = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}		
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
 
 		if (tmpEle[3].checked == true) { // 10만원이 체크 된다면
 
@@ -454,6 +594,22 @@ window.onload = function() {
 
 		priceCh();
 		var tmpEle = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		var tmpEleS = document.getElementsByName("start");
+		
+		for(var y =0; y<tmpEleS.length;y++) {
+			
+			if(tmpEleS[y].checked == true) {
+				tmpEleS[y].checked = false;
+			}
+		}		
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
 
 		if (tmpEle[4].checked == true) { // 10만원이 체크 된다면
 
@@ -529,6 +685,22 @@ window.onload = function() {
 		monthCh();
 		
 		var tmpEle = document.getElementsByName("start");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[0].checked == true) { // 10만원이 체크 된다면
 
@@ -568,6 +740,22 @@ window.onload = function() {
 		monthCh();
 		
 		var tmpEle = document.getElementsByName("start");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[1].checked == true) { // 10만원이 체크 된다면
 
@@ -607,6 +795,22 @@ window.onload = function() {
 		monthCh();
 		
 		var tmpEle = document.getElementsByName("start");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[2].checked == true) { // 10만원이 체크 된다면
 
@@ -646,6 +850,22 @@ window.onload = function() {
 		monthCh();
 		
 		var tmpEle = document.getElementsByName("start");
+		var tmpEleP = document.getElementsByName("price");
+		var tmpEleR = document.getElementsByName("region");
+		
+		for(var y =0; y<tmpEleR.length;y++) {
+			
+			if(tmpEleR[y].checked == true) {
+				tmpEleR[y].checked = false;
+			}
+		}
+		
+		for(var x =0; x<tmpEleP.length;x++) {
+			
+			if(tmpEleP[x].checked == true) {
+				tmpEleP[x].checked = false;
+			}
+		}
 
 		if (tmpEle[3].checked == true) { // 10만원이 체크 된다면
 

@@ -4,21 +4,21 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="TravelMapper">
-	<select id="selectpackageAll" resultType="travel.travelDTO">
-		select * from travel where category = '3'
+	<select id="selectfreeAll" resultType="travel.travelDTO">
+		select * from travel where category = '1'
 	</select>
 	<select id="selectthemaAll" resultType="travel.travelDTO">
 		select * from travel where category = '2'
 	</select>
-	<select id="selectfreeAll" resultType="travel.travelDTO">
-		select * from travel where category = '1'
-	</select>
-	<select id="selectInfo" resultType="travel.travelDTO">
-		select * from travel where price <![CDATA[>]]> #{price} 
+	<select id="selectpackageAll" resultType="travel.travelDTO">
+		select * from travel where category = '3'
 	</select>
 	<select id="selectRegion" resultType="travel.travelDTO">
 		select * from travel where address1 = #{address1} 
 	</select>
+	<select id="selectInfo" resultType="travel.travelDTO">
+		select * from travel where price <![CDATA[>]]> #{price} 
+	</select>	
 	<select id="selectStart" resultType="travel.travelDTO">
 		select * from travel where startm = #{startmonth} 
 	</select>
